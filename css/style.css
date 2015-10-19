@@ -1,3 +1,45 @@
-.flexbox-container > div {
-  width: 50%;
+  @font-face {
+  font-family: "Monthoers";
+  src: url("/fonts/Monthoers.otf");
+  }
+.monthoers {font-family: Monthoers;}
+.text-shadow-black{text-shadow: 2px 2px #111;}
+.text-shadow-white{text-shadow: -1px 1px #eee;}
+.shadow-black {
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+#get-started{
+  margin-top: -30px;
+}
+
+.styled-border{
+  border-style: solid;
+  border-width: 10px;
+  -moz-border-image: url(/images/border.png) 15 stretch;
+  -webkit-border-image: url(/images/border.png) 15 stretch;
+  -o-border-image: url(/images/border.png) 15 stretch;
+  border-image: url(/images/border.png) 15 stretch;
+}
+.styled-btn{
+  border-width: 2px;
+  -moz-border-image: url(/images/btn.png) 4 stretch;
+  -webkit-border-image: url(/images/btn.png) 4 stretch;
+  -o-border-image: url(/images/btn.png) 4 stretch;
+  border-image: url(/images/btn.png) 4 stretch;
+}
+
+#mapButtonOpen, #mapButtonClose {
+  position: absolute;
+  z-index: 200;
+  right: -75px;
+  top: -75px;
+  height: 150px;
+  width: 150px;
+  background: url(/images/trails_map_button.png) no-repeat;
+}
+#mapButtonOpen span, #mapButtonClose span {
+  display: none;
+}
+
