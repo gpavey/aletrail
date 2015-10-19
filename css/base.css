@@ -405,12 +405,24 @@ hr {
 .fit { max-width: 100% }
 
 .border-box { box-sizing: border-box }
-/* Basscss Align */
 
+/* Basscss Background Images */
+.bg-cover   { background-size: cover }
+.bg-contain { background-size: contain }
+
+.bg-center  { background-position: center }
+.bg-top     { background-position: top }
+.bg-right   { background-position: right }
+.bg-bottom  { background-position: bottom }
+.bg-left    { background-position: left }
+
+/* Basscss Align */
 .align-baseline { vertical-align: baseline }
 .align-top      { vertical-align: top }
 .align-middle   { vertical-align: middle }
 .align-bottom   { vertical-align: bottom }
+
+
 /* Basscss Utility White Space */
 
 .m0  { margin:        0 }
@@ -481,8 +493,9 @@ hr {
 .z2 { z-index: 2 }
 .z3 { z-index: 3 }
 .z4 { z-index: 4 }
-/* Basscss Utility Responsive States */
 
+
+/* Basscss Utility Responsive States */
 .sm-show, .md-show, .lg-show {
   display: none !important
 }
