@@ -13,29 +13,32 @@
   <div class="flex flex-column" style="min-height:100vh">
     <header class="white bg-gray bg-cover bg-center "
       style="background-image: url(images/brewery.jpg)">
-      <nav class="clearfix white">
-        <div class="sm-col-right">
-          <a href="#get-started" class="btn py2">Get Started</a>
-          <a href="/" class="btn py2">Trail Stops</a>
-          <a href="/" class="btn py2">Getting Around</a>
-          <a href="/" class="btn py2">Things to Do</a>
-          <a href="/" class="btn py2">About</a>
-        </div>
-
-      </nav>
       <div class="left mb4 ml4">
         <img src="/images/logo-white.png">
       </div>
-<!--       <div class="center px2 py4">
-        <a href="#" class="h3 btn btn-outline mb4">Get Started</a>
-      </div> -->
     </header>
+          <nav class="clearfix black bg-white">
+            <div class="sm-col-right">
+              <a href="#get-started" class="btn py2">Get Started</a>
+              <a href="/" class="btn py2">Trail Stops</a>
+              <a href="/" class="btn py2">Getting Around</a>
+              <a href="/" class="btn py2">Things to Do</a>
+              <a href="/" class="btn py2">About</a>
+            </div>
+          </nav>
+    <main class=" relative">
 
-    <main>
 
       <section id="get-started" class="black bg-gray  bg-center text-shadow-white shadow-black"   style="background-image: url(images/wood.jpg);">
         <div class="container">
+
           <section id="start">
+                    <div id="sticky" class="sticky-element">
+          <div class="sticky-anchor"></div>
+          <div class="sticky-content">
+            <a href="#" class="mapButtonOpen" data-map><span>Map Toggle Button></span></a>
+          </div>
+        </div>
             <img class="left m1" style="width: 190px; height: 168px;" alt="The Missoula Spirit & Ale Trail" src="images/logo.png" >
             <h2 class="caps">How to do the Missoula Spirit & Ale Trail</h2>
             <p>Bacon ipsum dolor amet magna corned beef ex do excepteur tri-tip prosciutto eu aliqua aute nulla shoulder meatball pork andouille. Duis spare ribs consequat dolore reprehenderit turducken meatball short loin chicken. Magna aliquip beef ribs quis id turkey minim sed in ut labore do mollit shankle. Irure aliquip pariatur non, pig kielbasa pork belly eiusmod ut quis chicken brisket. Fatback reprehenderit fugiat venison chuck. Kevin leberkas pork chop, eiusmod hamburger incididunt bresaola dolore culpa shankle. Turducken picanha ut beef ribs.<p>
@@ -64,10 +67,10 @@
         <div class="container">
           <div class="clearfix">
             <div class="sm-col col-12 h1 py3 caps black center ">Distilaries and Breweries</div>
-            <a href="#" id="mapButtonOpen" data-map><span>Map Toggle Button></span></a>
+
             <div class="sm-col sm-col-6">
               <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
+                <img src="/images/logos/BayernRibbonLogo.gif"
                 width="96" height="96"
                 class="flex-none mr2" />
                 <div class="flex-auto ">
@@ -78,8 +81,8 @@
                     <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
                   </div>
                   <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
                   </div>
                 </div>
               </div>
@@ -87,7 +90,7 @@
 
             <div class="sm-col sm-col-6">
               <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
+                <img src="/images/logos/bigskybrewing.png"
                 width="96" height="96"
                 class="flex-none mr2" />
                 <div class="flex-auto">
@@ -98,8 +101,108 @@
                     <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
                   </div>
                   <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-col sm-col-6">
+              <div class="flex flex-center mb2 mr2 styled-border">
+                <img src="images/logos/flathead-lake-brewing.png"
+                width="96" height="96"
+                class="flex-none mr2" />
+                <div class="flex-auto">
+                  <p class="h2">BREWERY NAME</p>
+                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
+                  <div class="address">
+                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
+                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+                  </div>
+                  <div class="right mr1">
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-col sm-col-6">
+              <div class="flex flex-center mb2 mr2 styled-border">
+                <img src="images/logos/greatBurnBrewing.png"
+                width="96" height="96"
+                class="flex-none mr2" />
+                <div class="flex-auto">
+                  <p class="h2">BREWERY NAME</p>
+                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
+                  <div class="address">
+                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
+                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+                  </div>
+                  <div class="right mr1">
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-col sm-col-6">
+              <div class="flex flex-center mb2 mr2 styled-border">
+                <img src="images/logos/kettlehouse-logo.png"
+                width="96" height="96"
+                class="flex-none mr2" />
+                <div class="flex-auto">
+                  <p class="h2">BREWERY NAME</p>
+                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
+                  <div class="address">
+                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
+                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+                  </div>
+                  <div class="right mr1">
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-col sm-col-6">
+              <div class="flex flex-center mb2 mr2 styled-border">
+                <img src="images/logos/logo.png"
+                width="96" height="96"
+                class="flex-none mr2" />
+                <div class="flex-auto">
+                  <p class="h2">BREWERY NAME</p>
+                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
+                  <div class="address">
+                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
+                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+                  </div>
+                  <div class="right mr1">
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sm-col sm-col-6">
+              <div class="flex flex-center mb2 mr2 styled-border">
+                <img src="images/logos/tamarack.png"
+                width="96" height="96"
+                class="flex-none mr2" />
+                <div class="flex-auto">
+                  <p class="h2">BREWERY NAME</p>
+                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
+                  <div class="address">
+                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
+                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+                  </div>
+                  <div class="right mr1">
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
                   </div>
                 </div>
               </div>
@@ -118,8 +221,8 @@
                     <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
                   </div>
                   <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
                   </div>
                 </div>
               </div>
@@ -138,108 +241,8 @@
                     <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
                   </div>
                   <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                    <a href="/" class="btn btn-small h6 btn-outline styled-btn mb1">Brewers Site</a>
+                    <a href="/" type="button" class="btn btn-small h6 btn-outline styled-btn mb1">Map Location</a>
                   </div>
                 </div>
               </div>
@@ -257,6 +260,14 @@
       <p class="m0">Footer</p>
     </footer>
   </div>
-<!-- <script type="text/javascript" src="js/main.js"></script> -->
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+   <script>
+    $(window).load(function(){
+      $("nav").sticky({ bottomSpacing: 0 });
+      $(".mapButtonOpen").sticky({ topSpacing: 100, center:true, className:"hey" });
+    });
+  </script>
 </body>
 </html>

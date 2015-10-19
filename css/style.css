@@ -10,10 +10,10 @@
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
-#get-started{
+/*#get-started{
   margin-top: -30px;
-}
-
+}*/
+nav {z-index: 199;}
 .styled-border{
   border-style: solid;
   border-width: 10px;
@@ -29,17 +29,24 @@
   -o-border-image: url(/images/btn.png) 4 stretch;
   border-image: url(/images/btn.png) 4 stretch;
 }
+.btn-outline:hover {
+  background: url(/images/stroke.png)no-repeat;
+  background-size: 105%;
+  height:100%;
+  overflow: visible;
+  color:white;
+}
 
-#mapButtonOpen, #mapButtonClose {
+.mapButtonOpen, .mapButtonClose {
   position: absolute;
   z-index: 200;
-  right: -75px;
-  top: -75px;
+  right: 30px;
+  top: -5px;
   height: 150px;
   width: 150px;
-  background: url(/images/trails_map_button.png) no-repeat;
+  background: url(/images/topo.png) no-repeat;
+  background-size: 100%;
 }
-#mapButtonOpen span, #mapButtonClose span {
+.mapButtonOpen span, .mapButtonClose span {
   display: none;
 }
-

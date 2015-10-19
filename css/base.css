@@ -8,6 +8,9 @@
  *
  */
 
+.btn-small {
+  padding: .25rem .5rem !important;
+}
 
 /* Basscss Modules */
 body { margin: 0 }
@@ -332,9 +335,9 @@ hr {
   border-radius: 3px;
 }
 
-.btn-outline:hover {
+/*.btn-outline:hover {
   box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
-}
+}*/
 
 .btn-outline:active {
   box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125),
@@ -405,24 +408,12 @@ hr {
 .fit { max-width: 100% }
 
 .border-box { box-sizing: border-box }
-
-/* Basscss Background Images */
-.bg-cover   { background-size: cover }
-.bg-contain { background-size: contain }
-
-.bg-center  { background-position: center }
-.bg-top     { background-position: top }
-.bg-right   { background-position: right }
-.bg-bottom  { background-position: bottom }
-.bg-left    { background-position: left }
-
 /* Basscss Align */
+
 .align-baseline { vertical-align: baseline }
 .align-top      { vertical-align: top }
 .align-middle   { vertical-align: middle }
 .align-bottom   { vertical-align: bottom }
-
-
 /* Basscss Utility White Space */
 
 .m0  { margin:        0 }
@@ -430,6 +421,7 @@ hr {
 .mr0 { margin-right:  0 }
 .mb0 { margin-bottom: 0 }
 .ml0 { margin-left:   0 }
+.mb05 {margin: 4px; margin: .25rem;}
 
 .m1  { margin: 8px; margin: .5rem }
 .mt1 { margin-top: 8px; margin-top: .5rem }
@@ -493,9 +485,8 @@ hr {
 .z2 { z-index: 2 }
 .z3 { z-index: 3 }
 .z4 { z-index: 4 }
-
-
 /* Basscss Utility Responsive States */
+
 .sm-show, .md-show, .lg-show {
   display: none !important
 }
@@ -921,13 +912,10 @@ hr {
 .bg-lighten-2 { background-color: #FFFFFF; background-color: rgba(255,255,255,.125) }
 .bg-lighten-3 { background-color: #FFFFFF; background-color: rgba(255,255,255,.25) }
 .bg-lighten-4 { background-color: #FFFFFF; background-color: rgba(255,255,255,.5) }
-.btn-small {
-  padding: .25rem .5rem;
-}
 
 /* Optional Modules (not included in Basscss by default) */
 /*
-@import 'basscss-btn-sizes';
+
 @import 'basscss-color-forms-dark';
 @import 'basscss-input-range';
 @import 'basscss-progress';
