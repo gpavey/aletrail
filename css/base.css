@@ -8,9 +8,6 @@
  *
  */
 
-.btn-small {
-  padding: .25rem .5rem !important;
-}
 
 /* Basscss Modules */
 body { margin: 0 }
@@ -122,14 +119,14 @@ td { vertical-align: top }
 /* Basscss Base Typography */
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Asfalto, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: 'Asfalto, sans-serif;
+  /*font-weight: bold;*/
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -269,8 +266,7 @@ hr {
 .btn {
   font-family: inherit;
   font-size: inherit;
-  font-weight: bold;
-  font-weight: bold;
+ /* font-weight: bold;*/
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -349,6 +345,10 @@ hr {
 .btn-outline.is-disabled {
   opacity: .5;
 }
+.btn-small {
+  padding: .25rem .5rem !important;
+}
+
 /* Basscss Type Scale */
 
 .h1 { font-size: 32px; font-size: 2rem }
@@ -887,6 +887,7 @@ hr {
 .bg-gray   { background-color: #aaa }
 .bg-silver { background-color: #ddd }
 .bg-white  { background-color: #fff }
+.bg-greyish {background-color: #fcfaf4}
 
 .bg-aqua  { background-color: #7fdbff }
 .bg-blue  { background-color: #0074d9 }

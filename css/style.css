@@ -2,18 +2,32 @@
   font-family: "Monthoers";
   src: url("/fonts/Monthoers.otf");
   }
+
+@font-face {font-family: 'Asfalto-Italic';src: url('/fonts/2F769F_0_0.eot');src: url('/fonts/2F769F_0_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2F769F_0_0.woff2') format('woff2'),url('/fonts/2F769F_0_0.woff') format('woff'),url('/fonts/2F769F_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'Asfalto';src: url('/fonts/2F769F_1_0.eot');src: url('/fonts/2F769F_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2F769F_1_0.woff2') format('woff2'),url('/fonts/2F769F_1_0.woff') format('woff'),url('/fonts/2F769F_1_0.ttf') format('truetype');}
+body {
+  color:#33302e;
+  font-family: Asfalto;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #3302e;
+  font-family: Asfalto,sans-serif;
+}
 .monthoers {font-family: Monthoers;}
-.text-shadow-black{text-shadow: 2px 2px #111;}
-.text-shadow-white{text-shadow: -1px 1px #eee;}
+
 .shadow-black {
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
-/*#get-started{
-  margin-top: -30px;
-}*/
-nav {z-index: 199;}
+
+nav {
+  z-index: 199;
+  font-family: Asfalto;
+}
+
 .styled-border{
   border-style: solid;
   border-width: 10px;
@@ -41,9 +55,8 @@ nav {z-index: 199;}
   position: absolute;
   z-index: 200;
   right: 30px;
-  top: -5px;
-  height: 150px;
-  width: 150px;
+  top: 50px;
+
   background: url(/images/topo.png) no-repeat;
   background-size: 100%;
 }
