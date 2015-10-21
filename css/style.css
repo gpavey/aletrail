@@ -14,6 +14,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #3302e;
   font-family: Asfalto,sans-serif;
+  font-weight: normal;
 }
 .monthoers {font-family: Monthoers;}
 
@@ -22,10 +23,8 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
-
-nav {
-  z-index: 199;
-  font-family: Asfalto;
+.bg-greyish {
+  background-color: #fcfaf4;
 }
 
 .styled-border{
@@ -62,4 +61,63 @@ nav {
 }
 .mapButtonOpen span, .mapButtonClose span {
   display: none;
+}
+nav {
+  z-index: 199;
+  font-family: Asfalto;
+}
+#map {
+ height:300px;
+ width:600px;
+ margin:0;
+}
+.boozefinder{  background: #424241;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.boozefinder .list-header {
+  color: #fff;
+  height: 220px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 40%;
+}
+.boozefinder .list-middle {
+  color: #fff;
+  height: 300px;
+  left: 0;
+  overflow-y: scroll;
+  position: absolute;
+  top: 220px;
+  width: 40%;
+}
+.boozefinder .list-footer {
+  bottom: 0;
+  color: #fff;
+  height: 150px;
+  left: 0;
+  position: absolute;
+  width: 40%;
+}
+.boozefinder .list-middle ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.boozefinder .list-middle ul li {
+  background: rgba(0, 0, 0, 0) url("../img/theme/brew-finder/marker.png?20141215") left top no-repeat;
+  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0 0 20px 40px;
+  margin-bottom: 20px;
+  min-height: 10px;
+  -moz-background-size: 26px 31px;
+  -o-background-size: 26px 31px;
+  -webkit-background-size: 26px 31px;
+  background-size: 26px 31px;
 }

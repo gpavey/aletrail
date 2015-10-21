@@ -119,14 +119,14 @@ td { vertical-align: top }
 /* Basscss Base Typography */
 
 body {
-  font-family: 'Asfalto, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Asfalto, sans-serif;
-  /*font-weight: bold;*/
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -261,12 +261,12 @@ hr {
 .table-light tr:last-child td {
   border-bottom: 0;
 }
-/* Basscss Btn */
 
+
+/* Basscss Btn */
 .btn {
   font-family: inherit;
   font-size: inherit;
- /* font-weight: bold;*/
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -298,8 +298,9 @@ hr {
   border: 0;
   padding: 0;
 }
-/* Basscss Btn Primary */
 
+
+/* Basscss Btn Primary */
 .btn-primary {
   color: #fff;
   background-color: #0074d9;
@@ -321,7 +322,6 @@ hr {
   opacity: .5;
 }
 /* Basscss Btn Outline */
-
 .btn-outline,
 .btn-outline:hover {
   border-color: currentcolor;
@@ -331,9 +331,9 @@ hr {
   border-radius: 3px;
 }
 
-/*.btn-outline:hover {
+.btn-outline:hover {
   box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
-}*/
+}
 
 .btn-outline:active {
   box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125),
@@ -345,20 +345,17 @@ hr {
 .btn-outline.is-disabled {
   opacity: .5;
 }
-.btn-small {
-  padding: .25rem .5rem !important;
-}
+
 
 /* Basscss Type Scale */
-
 .h1 { font-size: 32px; font-size: 2rem }
 .h2 { font-size: 24px; font-size: 1.5rem }
 .h3 { font-size: 20px; font-size: 1.25rem }
 .h4 { font-size: 16px; font-size: 1rem }
 .h5 { font-size: 14px; font-size: .875rem }
 .h6 { font-size: 12px; font-size: .75rem }
-/* Basscss Utility Typography */
 
+/* Basscss Utility Typography */
 .bold    { font-weight: bold; font-weight: bold }
 .regular { font-weight: normal }
 .italic  { font-style: italic }
@@ -421,7 +418,6 @@ hr {
 .mr0 { margin-right:  0 }
 .mb0 { margin-bottom: 0 }
 .ml0 { margin-left:   0 }
-.mb05 {margin: 4px; margin: .25rem;}
 
 .m1  { margin: 8px; margin: .5rem }
 .mt1 { margin-top: 8px; margin-top: .5rem }
@@ -887,7 +883,6 @@ hr {
 .bg-gray   { background-color: #aaa }
 .bg-silver { background-color: #ddd }
 .bg-white  { background-color: #fff }
-.bg-greyish {background-color: #fcfaf4}
 
 .bg-aqua  { background-color: #7fdbff }
 .bg-blue  { background-color: #0074d9 }
@@ -914,9 +909,10 @@ hr {
 .bg-lighten-3 { background-color: #FFFFFF; background-color: rgba(255,255,255,.25) }
 .bg-lighten-4 { background-color: #FFFFFF; background-color: rgba(255,255,255,.5) }
 
+
 /* Optional Modules (not included in Basscss by default) */
 /*
-
+@import 'basscss-btn-sizes';
 @import 'basscss-color-forms-dark';
 @import 'basscss-input-range';
 @import 'basscss-progress';
