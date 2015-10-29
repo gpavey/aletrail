@@ -126,7 +126,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-
+  font-weight: bold;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: .5em;
@@ -261,12 +261,13 @@ hr {
 .table-light tr:last-child td {
   border-bottom: 0;
 }
-
-
 /* Basscss Btn */
+
 .btn {
   font-family: inherit;
   font-size: inherit;
+  font-weight: bold;
+  font-weight: bold;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
@@ -298,9 +299,8 @@ hr {
   border: 0;
   padding: 0;
 }
-
-
 /* Basscss Btn Primary */
+
 .btn-primary {
   color: #fff;
   background-color: #0074d9;
@@ -322,6 +322,7 @@ hr {
   opacity: .5;
 }
 /* Basscss Btn Outline */
+
 .btn-outline,
 .btn-outline:hover {
   border-color: currentcolor;
@@ -345,17 +346,16 @@ hr {
 .btn-outline.is-disabled {
   opacity: .5;
 }
-
-
 /* Basscss Type Scale */
+
 .h1 { font-size: 32px; font-size: 2rem }
 .h2 { font-size: 24px; font-size: 1.5rem }
 .h3 { font-size: 20px; font-size: 1.25rem }
 .h4 { font-size: 16px; font-size: 1rem }
 .h5 { font-size: 14px; font-size: .875rem }
 .h6 { font-size: 12px; font-size: .75rem }
-
 /* Basscss Utility Typography */
+
 .bold    { font-weight: bold; font-weight: bold }
 .regular { font-weight: normal }
 .italic  { font-style: italic }

@@ -16,8 +16,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Asfalto,sans-serif;
   font-weight: normal;
 }
+.alsfalto {font-family: Asfalto;}
 .monthoers {font-family: Monthoers;}
-
+.lowercase {
+    text-transform: lowercase;
+}
 .shadow-black {
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -64,14 +67,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 nav {
   z-index: 199;
+}
+nav .btn {
+  font-family: Asfalto;
+  font-weight: normal;
+}
+#trail-stops .h1 {
   font-family: Asfalto;
 }
+#trail-stops {
+  text-transform: lowercase;
+}
+
 #map {
- height:300px;
- width:600px;
+ height:480px;
+ width:66%;
  margin:0;
+ float:left;
 }
 .boozefinder{  background: #424241;
+  float:left;
   height: 650px;
   overflow: hidden;
   position: relative;
@@ -79,6 +94,7 @@ nav {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+.boozefinder li:hover {cursor: hand ;}
 .boozefinder .list-header {
   color: #fff;
   height: 220px;
@@ -120,4 +136,5 @@ nav {
   -o-background-size: 26px 31px;
   -webkit-background-size: 26px 31px;
   background-size: 26px 31px;
+
 }
