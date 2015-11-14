@@ -1,4 +1,7 @@
 
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
 $(document).ready(function(){
   var mapCenter = new google.maps.LatLng(37.7833, -122.4167);
   var map;

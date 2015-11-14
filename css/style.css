@@ -7,6 +7,8 @@
 
 
 @font-face {font-family: 'Asfalto';src: url('/fonts/2F769F_1_0.eot');src: url('/fonts/2F769F_1_0.eot?#iefix') format('embedded-opentype'),url('/fonts/2F769F_1_0.woff2') format('woff2'),url('/fonts/2F769F_1_0.woff') format('woff'),url('/fonts/2F769F_1_0.ttf') format('truetype');}
+
+
 body {
   color:#33302e;
   font-family: Asfalto;
@@ -16,8 +18,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Asfalto,sans-serif;
   font-weight: normal;
 }
+.h0 { font-size: 36px; font-size: 2.5rem }
 .alsfalto {font-family: Asfalto;}
 .monthoers {font-family: Monthoers;}
+.lato {font-family: Lato;}
 .lowercase {
     text-transform: lowercase;
 }
@@ -30,9 +34,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fcfaf4;
 }
 
+/* BORDERS */
 .styled-border{
   border-style: solid;
   border-width: 10px;
+  -moz-border-image: url(/images/border.png) 15 stretch;
+  -webkit-border-image: url(/images/border.png) 15 stretch;
+  -o-border-image: url(/images/border.png) 15 stretch;
+  border-image: url(/images/border.png) 15 stretch;
+}
+.styled-border-bottom{
+  border-style: solid;
+  border-width: 0 0 10px;
   -moz-border-image: url(/images/border.png) 15 stretch;
   -webkit-border-image: url(/images/border.png) 15 stretch;
   -o-border-image: url(/images/border.png) 15 stretch;
@@ -45,6 +58,20 @@ h1, h2, h3, h4, h5, h6 {
   -o-border-image: url(/images/btn.png) 4 stretch;
   border-image: url(/images/btn.png) 4 stretch;
 }
+
+/* SECTION HEADERS */
+h1:before, #get-started .h1:before {
+  padding: 0 10px 0 10px;
+  content:'\21A0';
+  vertical-align: 10%;
+}
+h1:after, #get-started .h1:after {
+  padding: 0 5px 0 10px;
+  content:'\219E';
+  vertical-align: 10%;
+}
+
+/* BUTTONS */
 .btn-outline:hover {
   background: url(/images/stroke.png)no-repeat;
   background-size: 105%;
@@ -52,7 +79,6 @@ h1, h2, h3, h4, h5, h6 {
   overflow: visible;
   color:white;
 }
-
 .mapButtonOpen, .mapButtonClose {
   position: absolute;
   z-index: 200;
@@ -65,6 +91,8 @@ h1, h2, h3, h4, h5, h6 {
 .mapButtonOpen span, .mapButtonClose span {
   display: none;
 }
+
+/* NAVBAR */
 nav {
   z-index: 199;
 }
@@ -72,47 +100,67 @@ nav .btn {
   font-family: Asfalto;
   font-weight: normal;
 }
+/* Trail Stop Cards */
 #trail-stops .h1 {
   font-family: Asfalto;
 }
 #trail-stops {
   text-transform: lowercase;
 }
+#trail-stops ul {list-style-type: none; margin: 0;padding: 0;}
 
+/* MAP SECTION */
 #map {
  height:480px;
  width:66%;
  margin:0;
  float:left;
 }
-.boozefinder{  background: #424241;
-  float:left;
+.map-side-panel{
   height: 650px;
   overflow: hidden;
   position: relative;
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  background-color: #424241;
 }
-.boozefinder li:hover {cursor: hand ;}
-.boozefinder .list-header {
-  color: #fff;
-  height: 220px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 40%;
+.map-side-panel .list-header{
+  width: 100%;
 }
-.boozefinder .list-middle {
+.map-side-panel .list-header div{  letter-spacing: .2em;}
+
+.map-side-panel .list-header .h3:before,
+.map-side-panel .list-header .h3:after {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  content: "";
+  display: inline-block;
+  height: .1em;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+  margin-bottom: .15em;
+}
+.map-side-panel .list-header .h3:before{
+    right: 0.5em;
+    margin-left: -50%;
+}
+.map-side-panel .list-header .h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+.map-side-panel .list-middle {
   color: #fff;
   height: 300px;
+  width: 100%;
   left: 0;
   overflow-y: scroll;
   position: absolute;
-  top: 220px;
-  width: 40%;
+  top: 200px;
 }
-.boozefinder .list-footer {
+.map-side-panel li a:hover {cursor: hand;}
+.map-side-panel .list-footer {
   bottom: 0;
   color: #fff;
   height: 150px;
@@ -120,13 +168,15 @@ nav .btn {
   position: absolute;
   width: 40%;
 }
-.boozefinder .list-middle ul {
+.map-side-panel .list-middle ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.boozefinder .list-middle ul li {
-  background: rgba(0, 0, 0, 0) url("../img/theme/brew-finder/marker.png?20141215") left top no-repeat;
+.list-middle li a:before{
+  content: url("/images/map-marker-icon.png");
+}
+.map-side-panel .list-middle ul li {
   border-bottom: 1px solid #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding: 0 0 20px 40px;
@@ -136,5 +186,42 @@ nav .btn {
   -o-background-size: 26px 31px;
   -webkit-background-size: 26px 31px;
   background-size: 26px 31px;
+}
 
+/* CARDS */
+.flex-card-text p, .flex-card-text .address {
+  line-height: 1;
+}
+
+/* MEDIA QUERIES */
+/* Code to adjust the layout to 2 cards per row */
+@media all and (max-width: 39em) {
+  .flex-card-list li {min-width:100%;}
+}
+@media all and (min-width:40em) {
+  /* Float layout */
+  .flex-card-list li {
+    width:50%;
+  }
+  .no-flexbox .flex-card-list li {
+    float:left;
+  }
+}
+/* Code to adjust the layout to 3 cards per row */
+@media all and (min-width:40em) and (max-width:60em) {
+
+  /* Clears the row for 2 item per row layout */
+  .no-flexbox .flex-card-list li:nth-child(2n+1) {
+    clear:both;
+  }
+}
+@media all and (min-width:60em) {
+  /* common to flex and non-flex */
+  .flex-card-list li {
+    width:33.33%;
+  }
+  /* Float specific: Clear after every third item */
+  .no-flexbox .flex-card-list li:nth-child(3n+1) {
+    clear:both;
+  }
 }

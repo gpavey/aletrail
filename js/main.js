@@ -72,6 +72,7 @@ $(function() {
   initializeScroll();
   controller.initializeMap();
   controller.createMarkers(locations,icons,markers,infoWindow);
+  controller.bindListeners(markers);
 });
 
 function Controller(){};
@@ -96,6 +97,7 @@ Controller.prototype = {
       });
     }
   },
+
   initializeMap: function(){
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 15,
@@ -103,6 +105,7 @@ Controller.prototype = {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
   },
+
   createMarkers: function (locations,icons,markers,infoWindow) {
     for (var i in locations){
       var location = locations[i];
@@ -113,42 +116,29 @@ Controller.prototype = {
         title: location.title,
         info: '<div class="h2">'+location.title+'</div>'
       });
-
       google.maps.event.addListener(marker,'click', function() {
         infoWindow.setContent( this.info );
         infoWindow.open( map, this );
       });
       markers.push(marker);
     }
+  },
 
-    function listClick(id){
-      google.maps.event.trigger(markers[id],'click');
+  bindListeners: function(markers){
+    function pan(latlon) {
+      var coords = latlon.split(",");
+      var panPoint = new google.maps.LatLng(coords[0], coords[1]);
+      map.panTo(panPoint);
     }
-
-    //   function pan(latlon,title) {
-    //     var coords = latlon.split(",");
-    //     var title = newInfoWindow(title)
-    //     console.log(coords);
-    //     console.log(title);
-    //     var panPoint = new google.maps.LatLng(coords[0], coords[1]);
-    //     map.panTo(panPoint);
-    //     infoWindow.setContent(title);
-    //     infoWindow.open( map, this );
-    //   }
-    //   function newInfoWindow(name){
-    //     return '<div class="h2">'+name+'</div>'
-    //   }
-
     $('.businessList').on('click', function () {
-      id = $(this).data('id');
-      console.log(id);
+      var id = $(this).data('id');
+      var latlon = $(this).data('location');
+      pan(latlon);
       google.maps.event.trigger(markers[id],'click');
     });
-
   },
 
 }
-
 
 
 //smooth scroll function
@@ -166,6 +156,7 @@ function initializeScroll(){
     }
   });
 }
+
 
 
 
