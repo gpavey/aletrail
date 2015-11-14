@@ -6,257 +6,380 @@
   <meta title="description" content="">
   <meta title="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="flex flex-column" style="min-height:100vh">
-    <header class="white bg-gray bg-cover bg-center "
-      style="background-image: url(images/brewery.jpg)">
-      <nav class="clearfix white">
-        <div class="sm-col-right">
-          <a href="#get-started" class="btn py2">Get Started</a>
-          <a href="/" class="btn py2">Trail Stops</a>
-          <a href="/" class="btn py2">Getting Around</a>
-          <a href="/" class="btn py2">Things to Do</a>
-          <a href="/" class="btn py2">About</a>
-        </div>
 
-      </nav>
+</head>
+<body class="border-box">
+  <div class="flex flex-column" style="min-height:100vh">
+    <header class="white bg-gray bg-cover bg-center"
+      style="background-image: url(images/stock1.jpg)";>
       <div class="left mb4 ml4">
         <img src="/images/logo-white.png">
       </div>
-<!--       <div class="center px2 py4">
-        <a href="#" class="h3 btn btn-outline mb4">Get Started</a>
-      </div> -->
     </header>
+    <nav class="clearfix bg-greyish border-bottom shadow-black" >
+      <div class="sm-col-right h2">
+        <a href="#get-started" class="btn py2">Get Started</a>
+        <a href="#trail-stops" class="btn py2">Trail Stops</a>
+        <a href="#roadMap" class="btn py2">Trail Map</a>
+        <a href="#getting-around" class="btn py2">Getting Around</a>
+        <a href="/" class="btn py2">Things to Do</a>
+      </div>
+    </nav>
 
-    <main>
+    <main class=" relative">
 
-      <section id="get-started" class="black bg-gray  bg-center text-shadow-white shadow-black"   style="background-image: url(images/wood.jpg);">
+      <section id="get-started" class="bg-center" style="background-image: url(/images/groovepaper.png);">
+        <div id="sticky" class="sticky-element">
+          <div class="sticky-anchor"></div>
+          <div class="sticky-content">
+            <a href="#" class="mapButtonOpen" style="height: 100px;
+  width: 100px;"><span>Map Toggle Button></span></a>
+          </div>
+        </div>
+
         <div class="container">
           <section id="start">
-            <img class="left m1" style="width: 190px; height: 168px;" alt="The Missoula Spirit & Ale Trail" src="images/logo.png" >
-            <h2 class="caps">How to do the Missoula Spirit & Ale Trail</h2>
-            <p>Bacon ipsum dolor amet magna corned beef ex do excepteur tri-tip prosciutto eu aliqua aute nulla shoulder meatball pork andouille. Duis spare ribs consequat dolore reprehenderit turducken meatball short loin chicken. Magna aliquip beef ribs quis id turkey minim sed in ut labore do mollit shankle. Irure aliquip pariatur non, pig kielbasa pork belly eiusmod ut quis chicken brisket. Fatback reprehenderit fugiat venison chuck. Kevin leberkas pork chop, eiusmod hamburger incididunt bresaola dolore culpa shankle. Turducken picanha ut beef ribs.<p>
-
-            <p>Eiusmod chuck ullamco salami, cupidatat bresaola spare ribs alcatra officia adipisicing. Ball tip alcatra doner porchetta consectetur, beef ribs corned beef venison occaecat sirloin dolor meatloaf aliqua exercitation bacon. Tempor irure proident turducken salami kevin, tongue eiusmod shankle. Culpa kevin hamburger laborum, picanha ball tip tongue shankle drumstick proident. In quis cupim, bacon pancetta short loin shankle ea consequat brisket flank qui. Fugiat deserunt reprehenderit, tail irure adipisicing sunt leberkas cow pancetta prosciutto. Ut reprehenderit aliqua, landjaeger meatloaf quis pariatur occaecat capicola biltong dolore velit meatball anim.</p>
+              <div class="caps center">
+                <h1>How to do the Missoula Spirit & Ale Trail</h1>
+              </div>
+            <div class="flex flex-stretch">
+              <div class="flex-auto px2 py4">
+                <img class="m0" style="width: 400px; height:auto;" alt="The Missoula Spirit & Ale Trail" src="images/logo.png" >
+              </div>
+              <div class="flex px2 py2">
+                <p class="h3 lato">The Missoula Spirit & Ale Trail provides you with a self-guided tasting tour through our beautiful and friendly mountain town.  By following the Trail Map, you’ll visit Missoula’s 9 unique craft breweries and 3 distilleries while tasting an incredible variety of locally made spirits and beer styles.  While on the trail, you’ll also get a tour of some of the most scenic spots in town and travel through historic neighborhoods, all while drinking like a local.<p>
+              </div>
+            </div>
           </section>
+
           <section id="rules">
-            <h2 class="caps">Rules of the trail</h2>
-            <ul>
-              <li>Beef ribs aliquip alcatra ipsum. Occaecat officia elit, dolor non jerky esse ribeye pork loin aute in picanha aliqua dolore laborum.</li>
-              <li>Irure pork rump, landjaeger laborum pariatur nostrud. Laborum ball tip doner, filet mignon spare ribs esse cow. Sunt sirloin shoulder ut. </li>
-              <li>Ipsum est id in, pancetta shank esse filet mignon rump tri-tip beef adipisicing duis ut.</li>
-              <li>Meatball ground round deserunt jowl ut sunt kevin alcatra ut laboris veniam pastrami sed eu. Pancetta bresaola corned beef cupim</li>
-              <li>Occaecat officia sed ex adipisicing, consequat enim tenderloin ball tip. Ut frankfurter tongue nisi chuck. Filet mignon jowl shoulder, venison kielbasa t-bone proident tail aliqua exercitation pork fugiat. </li>
+            <h2 class="caps center h1">Rules of the trail</h2>
+            <ul class="h3 lato">
+              <li>Getting started is easy – either click the “__________” badge to print your own Spirit & Ale Trail passport, or pick up a printed map/passport at any participating Missoula brewery or distillery (known as Trail Stops).</li>
+              <li>Passport in hand, visit each brewery and distillery to taste what they’re making then collect your passport stamp.</li>
+              <li>Taking your time, move along to the next Trail Stop…and the next, and the next… until your passport is full.</li>
+              <li>Mail in your completed passport to redeem your prize [LINK TO REDEMPTION/SCHWAG SECTION]!  Collect all 9 brewery stamps and receive a custom stainless steel pint glass.  Collect all 3 distillery stamps and receive a stainless steel shot glass.  Fill your passport and receive BOTH prizes!</li>
             </ul>
           </section>
-          <section id="swag">
-            <h2 class="caps">What amazing stuff do I get?</h2>
-            <img class=" m1" style="width: 190px; height: 168px;" alt="Some amazing stuff" src="" >
-            <img class="m1" style="width: 190px; height: 168px;" alt="more amazing stuff" src="" >
+
+          <section id="swag" class="h3 lato">
+            <h2 class="caps center h1">Redemption (No, not your soul)</h2>
+            <p>So you’ve completed your passport.  Congratulations!  You deserve a reward. Or two.<p>
+            <p>To redeem your prize, simply mail in your completed passport (one passport per person, per prize redemption) to ____________________________________. [ALTERNATIVE: GIVE LOCAL REDEMPTION ADDRESS, IF THAT TURNS OUT TO BE AN OPTION.]</p>
+            <p>Did you collect all 9 brewery stamps?  Then we’ll send you a 16 oz. stainless steel pint glass:<img class=" m1" style="width: 190px; height: 168px;" alt="Some amazing stuff" src="/images/shot.png" ></p>
+            <p>Did you collect all 3 distillery stamps? Then we’ll send you a 2.5 oz. stainless steel shot glass:<img class="m1" style="width: 190px; height: 168px;" alt="more amazing stuff" src="/images/pint.png" ></p>
+            <p>Is your passport completely full? Then, my friend, we will send you both.</p>
+            <p>Both glasses are 18/8 stainless steel, excellent for keeping your beverages cold, and sturdy enough to take with you on your next outdoor adventure.</p>
+
+            <p>If you want to order more for yourself or for friends who weren’t able to join you on the Missoula Spirit & Ale Trail, we can do that too. [LINK TO ADDITIONAL SCHWAG ORDER AREA/PAGE]</p>
+            </p>
+
+            </div>
           </section>
         </div>
       </section>
 
-      <section data-id="trail-stops" " class="bg-cover bg-center shadow-black">
+      <section id="trail-stops" class="bg-cover bg-center bg-greyish shadow-black monthoers py3">
+
         <div class="container">
           <div class="clearfix">
-            <div class="sm-col col-12 h1 py3 caps black center ">Distilaries and Breweries</div>
-            <a href="#" id="mapButtonOpen" data-map><span>Map Toggle Button></span></a>
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto ">
-                  <p class="h2 monthoers">BREWERY NAME</p>
-                  <p class="m0">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
-                  </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
-                  </div>
-                </div>
-              </div>
+
+            <div class="py3 caps center">
+              <h1>DISTILLERIES and Breweries</h1>
             </div>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+            <ul class="flex-card-list flex flex-wrap flex-justify">
+
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border ">
+                  <div class="flex-card-logo m1 styled-border-bottom">
+                    <img src="/images/logos/BayernRibbonLogo.gif"
+                    width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Brewing traditional German styles in Missoula for over 25 years</p>
+                    <div class="address flex-grow">
+                      <div class="h2">1507 Montana Street </div>
+                      <div class="h3">Noon-8pm Every Day</div>
+                    </div>
+                    <div class="">
+                      <a href="http://bayernbrewery.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border ">
+                  <div class="flex-card-logo m1 styled-border-bottom">
+                    <img src="/images/logos/bigskybrewing.png"
+                    width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Missoula’s largest brewery and makers of Moose Drool Brown Ale</p>
+                    <div class="address flex-grow">
+                      <div class="h2">5417 Trumpeter Way</div>
+                      <div class="h3">WED-FRI 11AM-6:30PM.; SAT 11AM-6PM</div>
+                    </div>
+                    <div class="">
+                      <a href="http://bigskybrew.com" target="_blank" class="btn h4 btn-outline styled-btn mb1 ">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/draughtworks.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">2014 GABF award winners for Very Small Brewing Company & Brewer</p>
+                    <div class="address flex-grow">
+                      <div class="h2">915 Toole Avenue</div>
+                      <div class="h3">Noon-9pm every day</div>
+                    </div>
+                    <div class="">
+                      <a href="http://draughtworksbrewery.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/flathead-lake-brewing.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Bigfork, MT brewery with a downtown Missoula pubhouse</p>
+                    <div class="address flex-grow">
+                      <div class="h2">424 North Higgins</div>
+                      <div class="h3">Closed Mon; Tue-Thu & Sun 3pm - 12am; Fri-Sat 3pm -2am</div>
+                    </div>
+                    <div class="">
+                      <a href="http://Flatheadlakebrewing.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/greatBurnBrewing.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Brewing West Coast-style ales on Missoula’s south side</p>
+                    <div class="address flex-grow">
+                      <div class="h2">2230 McDonald Avenue</div>
+                      <div class="h3">Closed Mon; Sun-Thu 3pm - 9pm; Fri-Sat noon - 9pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://Greatburnbrewing.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/imagination.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Missoula’s only combination microbrewery and community center</p>
+                    <div class="address flex-grow">
+                      <div class="h2">1151 West Broadway</div>
+                      <div class="h3">MON-FRI 2pm - 8pm; SAT-SUN 12 - 8pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://imaginenationbrewing.com" target="_blank"class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/kettlehouse-logo.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">2015 GABF winner for Cold Smoke scotch ale</p>
+                    <div class="address flex-grow">
+                      <div class="h2">Northside: 313 N 1st St W</div>
+                      <div class="h3">FRI-SUN 12 - 9pm.</div>
+                      <div class="h2">Southside: 602 Myrtle St</div>
+                      <div class="h3">FRI-SUN 12 - 10pm.</div>
+                    </div>
+                    <div class="">
+                      <a href="http://kettlehouse.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
-            <div class="sm-col sm-col-6">
-              <div class="flex flex-center mb2 mr2 styled-border">
-                <img src="http://d2v52k3cl9vedd.cloudfront.net/assets/images/placeholder-square.svg"
-                width="96" height="96"
-                class="flex-none mr2" />
-                <div class="flex-auto">
-                  <p class="h2">BREWERY NAME</p>
-                  <p class="m0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, soluta, ut obcaecati, laudantium nobis.</p>
-                  <div class="address">
-                    <div class="h5">2311N (Fourth floor), Los Robles Avenue</div>
-                    <div class="h6">WED-FRI 5-11 P.M.; SAT 2-7 P.M.</div>
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column flex-grow styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/mbc.png" width="auto" height="100"/>
                   </div>
-                  <div class="right mr1">
-                    <a href="/" class="btn btn-small btn-outline styled-btn mb1">Brewers Site</a>
-                    <a href="/" type="button" class="btn btn-small btn-outline styled-btn mb1">Location</a>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Brewery reviving historic Missoula recipes</p>
+                    <div class="address flex-grow">
+                      <div class="h2">200 International Drive</div>
+                      <div class="h3">MON-THU 3pm - 8pm; FRI-SUN 12 - 8pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://missoulabrewingcompany.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </li>
 
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column flex-grow styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/tmd.png" width="auto" height="100"/>
+                  </div>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Missoula’s oldest vodka distillery</p>
+                    <div class="address flex-grow">
+                      <div class="h2">631 Woody Street</div>
+                      <div class="h3">MON-SAT 12 - 8pm; SUN 2 - 6pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://Flatheadvodka.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/montgomery.png" width="100" height="100"/>
+                  </div>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">One of “Food & Wine” Magazine’s Top 100 New Bars 2015</p>
+                    <div class="address flex-grow">
+                      <div class="h2">129 West Front Street</div>
+                      <div class="h3">MON-SAT 12 - 8 pm; SUN 12 -7pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://montgomerydistillery.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="flex-card-list-item flex center ">
+                <div class="flex-card flex flex-column flex-grow styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/rattlesnake.png" width="100" height="100"/>
+                  </div>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Missoula’s newest distillery</p>
+                    <div class="address flex-grow">
+                      <div class="h2">128 West Alder Street</div>
+                      <div class="h3">MON-SUN 12 - 8pm</div>
+                    </div>
+                    <div class="">
+                      <a href="http://rattlesnakedistillers.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="flex-card-list-item flex center">
+                <div class="flex-card flex flex-column styled-border">
+                  <div class="flex-card-logo center m1 styled-border-bottom">
+                    <img src="/images/logos/tamarak.png" width="100" height="100"/>
+                  </div>
+                  <div class="flex-card-text flex flex-column flex-grow">
+                    <p class="h3">Lakeside, MT brewery with a Missoula taproom overlooking Caras Park</p>
+                    <div class="address flex-grow">
+                      <div class="h2">231 West Front Street</div>
+                      <div class="h3">MON-SUN 11am - midnight </div>
+                    </div>
+                    <div class="">
+                      <a href="http://tamarackbrewing.com" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>
+                      <a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section data-id="getting-around" class="bg-olive"></section>
-      <section data-id="things-to-do" class="bg-lime"></section>
-      <section data-id="about" class="bg-fuchsia"></section>
+      <section id="roadMap" class="bg-center" style="background-image: url(/images/grey-background.png)">
+        <div id="map"></div>
+        <div class="map-side-panel list-header bg-maroon bg-lighten-1">
+          <div class="locations m2">
+            <div class="list-header mt4">
+              <div class="h0 asfalto white center">Trail<img src="/images/maps-icon.png"> Map</div>
+              <div class="asfalto h3 white center">Show us on the map</div>
+            </div>
+            <div class="list-middle m2">
+              <ul>
+                <li><a class="businessList" data-location="46.872617, -114.020145" data-id="0"><div red h2>Bayern Brewing</div><div>1507 Montana Street</div></a></li>
+                <li><a class="businessList" data-location="46.922426, -114.0753071" data-id="1">Big Sky Brewing</a></li>
+                <li><a class="businessList" data-location="46.8776892, -114.0061477" data-id="2"> Draught Works</a></li>
+                <li><a class="businessList" data-location="46.8735454, -113.9949491" data-id="3"> Flathead Lake Brewing Co.</a></li>
+                <li><a class="businessList" data-location="46.840025, -114.032837" data-id="4"> Great Burn</a></li>
+                <li><a class="businessList" data-location="46.876458, -114.009638" data-id="5"> Imagine Nation Brewing Co.</a></li>
+                <li><a class="businessList" data-location="46.867009, -113.998851" data-id="6"> Kettle House</a></li>
+                <li><a class="businessList" data-location="46.8779048, -113.9974585" data-id="7"> Kettle House - Northside Taproom</a></li>
+                <li><a class="businessList" data-location="46.904825, -114.0456542" data-id="8"> Missoula Brewing Co.</a></li>
+                <li><a class="businessList" data-location="46.8763342, -113.99703" data-id="9"> The Montana Distillery'</a></li>
+                <li><a class="businessList" data-location="46.8702904, -113.9984398" data-id="10"> Montgomery Distillery</a></li>
+                <li><a class="businessList" data-location="46.8752561, -113.9952258" data-id="11"> Rattlesnake Creek Distillers</a></li>
+                <li><a class="businessList" data-location="46.8709932, -113.9995003" data-id="12"> Tamarack Brewing Company</a></li>
+              </ul>
+            </div>
+            <div class="list-footer m2">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="getting-around" class="bg-center" style="background-image: url(/images/grey-background.png)";>
+
+      </section>
+
+      <section id="things-to-do" class="bg-lime"></section>
+      <section id="about" class="bg-fuchsia"></section>
     </main>
     <footer class="p2 border">
       <p class="m0">Footer</p>
     </footer>
   </div>
-<!-- <script type="text/javascript" src="js/main.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="/js/main2.js"></script>
+  <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+  <script>
+    $(window).load(function(){
+      $("nav").sticky({ bottomSpacing: 0 });
+      $(".mapButtonOpen").sticky({ topSpacing: 100, center:true, className:"hey" });
+    });
+  </script>
 </body>
 </html>
