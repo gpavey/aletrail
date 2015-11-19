@@ -949,7 +949,7 @@ hr {
 :root {
 
   --font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  --line-height: 1.5;
+  --p: 1.5;
   --heading-font-family: var(--font-family);
   --heading-font-weight: bold;
   --heading-line-height: 1.25;

@@ -1,5 +1,4 @@
 $(function() {
-
   var icons = {
     beer: {
       name: 'Beer',
@@ -17,69 +16,97 @@ $(function() {
   initializeScroll();
   initializeMap();
   getMarkerData(icons,markers,infoWindow);
-  bindListeners(markers);
 });
 
+//Initialize Google Maps
+function initializeMap(){
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: new google.maps.LatLng(46.8709932 ,-113.9995003),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+}
 
-  function getMarkerData(icons,markers,infoWindow){
+// load JSON data then Create Cards, Create Markers and Business List
+function getMarkerData(icons,markers,infoWindow){
   var requestAjax = $.ajax({
     url: '../file/locations.json',
     type: 'GET',
     });
     requestAjax.done(function(data){
       locations = data;
+      createCards(locations);
       createMarkers(locations,icons,markers,infoWindow);
+      createMapList(locations,markers);
     });
     requestAjax.fail(function(jqXHR, textStatus, errorThrown){
       alert(errorThrown);
       alert(textStatus);
+  });
+}
+
+//Create Cards
+function createCards(locations){
+  for (var i in locations){
+    var location = locations[i];
+    $('.business-cards').append('<li class="bg-greyish flex-card-list-item flex center">'+
+      '<div class="flex-card flex flex-column styled-border" style="min-width: calc(100% - 20px)">'+
+        '<div class="flex-card-logo center m1 styled-border-bottom">'+
+          '<img src="'+location.logo+'" width="100" height="100"/>'+
+        '</div>'+
+        '<div class="flex-card-text flex flex-column flex-grow">'+
+          '<p class="h3">'+location.description+'</p>'+
+          '<div class="address flex-grow">'+
+            '<div class="h2">'+location.address+'</div>'+
+            '<div class="h3">'+location.time+'</div>'+
+          '</div>'+
+          '<div class="">'+
+            '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>'+
+            '<a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</li>');
+  };
+}
+
+//Create and place markers on map
+function createMarkers(locations,icons,markers,infoWindow) {
+  for (var i in locations){
+    var location = locations[i];
+    var myLatLng = new google.maps.LatLng(location.lat,location.lng);
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      icon: icons[location.type].icon,
+      map: map,
+      title: location.title,
+      info: '<div class="list-location-title">'+location.title+'</div>'
     });
-  }
-
-  function initializeMap(){
-    map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: new google.maps.LatLng(46.8709932 ,-113.9995003),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+    google.maps.event.addListener(marker,'click', function() {
+      infoWindow.setContent( this.info );
+      infoWindow.open( map, this );
     });
+    markers.push(marker);
   }
-
-  function createMarkers(locations,icons,markers,infoWindow) {
-    console.log(locations);
-    for (var i in locations){
-      var location = locations[i];
-      var myLatLng = new google.maps.LatLng(location.lat,location.lng);
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        icon: icons[location.type].icon,
-        map: map,
-        title: location.title,
-        info: '<div class="h2">'+location.title+'</div>'
-      });
-      google.maps.event.addListener(marker,'click', function() {
-        infoWindow.setContent( this.info );
-        infoWindow.open( map, this );
-      });
-      markers.push(marker);
-    }
+}
+// Create business list for map sidebar
+function createMapList(locations,markers){
+  for (var i in locations){
+    var location = locations[i];
+    $('.businessList').append( '<li class="lato"><a class="business flex flex-center" data-location='+location.lat+','+location.lng+' data-id='+location.id+'><div class="flex-auto lh1 px1"><div class="h2">'+location.title+'</div><div class="h3">'+location.address+'</div></div></a></li>');
   }
-
-  function bindListeners(markers){
-    function pan(latlon) {
-      var coords = latlon.split(",");
-      var panPoint = new google.maps.LatLng(coords[0], coords[1]);
-      map.panTo(panPoint);
-    }
-    $('.businessList').on('click', function () {
-      var id = $(this).data('id');
-      var latlon = $(this).data('location');
-      pan(latlon);
-      google.maps.event.trigger(markers[id],'click');
-    });
+  function pan(latlon) {
+    var coords = latlon.split(",");
+    var panPoint = new google.maps.LatLng(coords[0], coords[1]);
+    map.panTo(panPoint);
   }
-
-
-
+  $('.business').on('click', function () {
+    var id = $(this).data('id');
+    var latlon = $(this).data('location');
+    pan(latlon);
+    google.maps.event.trigger(markers[id],'click');
+  });
+}
 
 //smooth scroll function
 function initializeScroll(){
