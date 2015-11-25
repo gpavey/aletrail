@@ -22,6 +22,8 @@ $(function() {
 function initializeMap(){
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
+    scrollwheel: false,
+    mapTypeControl: false,
     center: new google.maps.LatLng(46.8709932 ,-113.9995003),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
@@ -49,7 +51,7 @@ function getMarkerData(icons,markers,infoWindow){
 function createCards(locations){
   for (var i in locations){
     var location = locations[i];
-    $('.business-cards').append('<li class="bg-greyish flex-card-list-item flex center">'+
+    $('.business-cards').append('<li class="bg-greyish border-box  flex flex-300 m1 center">'+
       '<div class="flex-card flex flex-column styled-border" style="min-width: calc(100% - 20px)">'+
         '<div class="flex-card-logo center m1 styled-border-bottom">'+
           '<img src="'+location.logo+'" width="100" height="100"/>'+
@@ -62,7 +64,6 @@ function createCards(locations){
           '</div>'+
           '<div class="">'+
             '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>'+
-            '<a href="/" type="button" class="btn h4 btn-outline styled-btn mb1">Directions</a>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -74,13 +75,17 @@ function createCards(locations){
 function createMarkers(locations,icons,markers,infoWindow) {
   for (var i in locations){
     var location = locations[i];
-    var myLatLng = new google.maps.LatLng(location.lat,location.lng);
+    var lat = location.lat;
+    var lng = location.lng;
+    var myLatLng = new google.maps.LatLng(lat,lng);
     var marker = new google.maps.Marker({
       position: myLatLng,
       icon: icons[location.type].icon,
       map: map,
       title: location.title,
-      info: '<div class="list-location-title">'+location.title+'</div>'
+      info: '<div class="list-location-title">'+
+      '<a href="https://www.google.com/maps/dir/Current+Location/'+location.title+'">'+location.title+'</a>'+
+      '</div>'
     });
     google.maps.event.addListener(marker,'click', function() {
       infoWindow.setContent( this.info );

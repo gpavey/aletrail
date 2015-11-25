@@ -13,13 +13,17 @@ body {
   color:#33302e;
   font-family: Asfalto;
 }
+html {font-size: 16px;}
 h1, h2, h3, h4, h5, h6 {
-  color: #3302e;
+  /*color: #3302e;*/
   font-family: Asfalto,sans-serif;
   font-weight: normal;
 }
+ul {margin:0;}
+.overflow-auto {overflow: auto;}
 .h0 { font-size: 36px; font-size: 2.5rem }
 .lh1 {line-height: 1;}
+.lh1-2 {line-height: 1.2;}
 .ls1 {letter-spacing: .2em;}
 .alsfalto {font-family: Asfalto;}
 .monthoers {font-family: Monthoers;}
@@ -32,9 +36,35 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+.bg-yellowish {
+  background-color:#D9E021;
+}
 .bg-greyish {
   background-color: #fcfaf4;
 }
+.bg-green {
+  background-color: #1E824C;
+}
+.bg-greyer {
+  background-color: #424241;
+}
+.hr {
+  border: 0;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+  border-bottom-color: #D9E021;
+}
+.flex-even {
+  flex-grow: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto
+  flex-basis: 0;
+}
+
+/* SIDE NAV */
 
 /* BORDERS */
 .styled-border{
@@ -76,27 +106,42 @@ h1:after, #get-started .h1:after {
 /* BUTTONS */
 .btn-outline:hover {
   background: url(/images/stroke.png)no-repeat;
-  background-size: 105%;
-  height:100%;
+  background-size: 100%;
+/*  height:100%;*/
   overflow: visible;
   color:white;
 }
-.mapButtonOpen, .mapButtonClose {
+.btn-primary {
+  background-color: #269545;
+  font-family: lato;
+}
+.nav,.passport,.nav-small {height: 0;}
+.nav-menu {
   position: absolute;
-  z-index: 200;
-  right: 30px;
-  top: 50px;
+  z-index: 9999999;
+  top:0;
+  height: 50px;
+  width: 100%;
+}
+.nav-small {
+  z-index: 9999999;
+}
+.passport-button  {
+  position: absolute;
+  z-index: 9999999;
+  top:50px;
+  right: 50px;
+  height: 100px;
+  width:100px;
+}
 
-  background: url(/images/topo.png) no-repeat;
-  background-size: 100%;
-}
-.mapButtonOpen span, .mapButtonClose span {
-  display: none;
-}
+/*.show-button {
+  display: inline-block;
+}*/
 
 /* NAVBAR */
 nav {
-  z-index: 199;
+  z-index: 999;
 }
 nav .btn {
   font-family: Asfalto;
@@ -110,20 +155,25 @@ nav .btn {
   text-transform: lowercase;
 }
 #trail-stops ul {list-style-type: none; margin: 0;padding: 0;}
-/* Getting Around Cards */
-.getting-around{
+
+/* GETTING AROUND CARDS */
+.getting-around-card{
   box-sizing: border-box;
   margin: 16px;
   margin: 1rem;
-  background-color: #fcfaf4;
+  color:#fff;
+  background-color: #424241;
   border-radius: 3px;
   /*-webkit-box-flex: 1;*/
   -webkit-flex: 1 0 200px;
   -ms-flex: 1 0 200px;
   flex: 1 0 200px;
 }
+.getting-around-card a, getting-around-card a:hover {
+  color:#D9E021;
+}
 .getting-around-image{
-  background-color: #2ecc40;
+  background-color: #1E824C;
   width: 100%;
   height:100px;
   margin:0;
@@ -155,6 +205,7 @@ nav .btn {
 
 
 /* MAP SECTION */
+.trail-map, .map, .map-panel {z-index: 1;}
 .map {
  height:650px;
  width:66%;
@@ -202,12 +253,12 @@ nav .btn {
 }
 .map-panel .list-middle {
   color: #fff;
-  height: 400px;
-  width: 100%;
+  height: 500px;
+  width: 95%;
   left: 0;
   overflow-y: scroll;
   position: absolute;
-  top: 200px;
+  top: 110px;
 }
 
 .map-panel .list-middle ul {
@@ -243,17 +294,51 @@ nav .btn {
   cursor: pointer;
 }
 
-/* CARDS */
+/* BUSINESS CARDS */
 .flex-card-text p, .flex-card-text .address {
   line-height: 1;
 }
+.flex-300 {
+  -webkit-flex: 1 0 300px;
+  -ms-flex: 1 0 300px;
+  flex: 1 0 300px;
+}
+
+/* EVENTS */
+.events a, .events a:hover {
+  color:#D9E021;
+  cursor: pointer;
+}
+
+/* FOOTER */
+  .footer {
+    height: 300px;
+    width: 100%;
+    background-repeat: repeat-x;
+    background-image: url("../images/trees.jpg");
+    position:relative;
+    left:0;
+    bottom:0;
+  }
+ /* .footer-img {
+    position:relative;
+    left:0;
+    bottom:0;
+  }*/
 
 /* MEDIA QUERIES */
 /* Code to adjust the layout to 2 cards per row */
 @media all and (max-width: 39em) {
+  .nav-small .h1{font-size: 1rem;}
+  .get-started h1, .get-started .h1 {font-size: 1.5rem;}
+  .get-started .h3 {font-size: 1rem;}
   .flex-card-list li {
-    min-width:100%;
+    max-width:100%;
   }
+  .trail-stops .py3 {padding-top: 3rem;padding-bottom: 0rem;}
+  .trail-stops h1, .getting-around h1 {font-size: 1.5rem;}
+  .trail-stops .caps {letter-spacing: 0em;}
+  .getting-around .py2 {padding-top: 1px;padding-bottom: 0}
   .map {
    height:300px;
    width:100%;
@@ -261,19 +346,30 @@ nav .btn {
    float:none;
   }
   .map {
-   height:400px;
+   height:200px;
    width:100%;
    margin:0;
    float:none;
   }
-  .list-header.mt4{
-    margin-top: 10px;
-    margin-top: 1rem;
+  .map-panel {
+    height:220px;
   }
+  .map-panel .list-header img {height: 35px; width: 35px;}
   .map-panel .list-middle {
-    top: 110px;
-    height: 480px;
+    top: 80px;
+    height: 100px;
+    width: 90%;
   }
+  .map-panel .locations{
+    margin: 8px; margin: .5rem ;
+  }
+  .map-panel .locations .h0, .map-panel .locations .h2 {font-size: 1.25rem;}
+  .map-panel .locations .h3 {font-size: 1rem;}
+  .header,nav, .start-img, .passport-button, .events, .get-started {display: none;}
+
+  .events ul {margin:0;padding:0;}
+  .events ul li .h1 {font-size: 1rem;}
+  .events ul li .h2 {font-size: .75rem;}
 }
 @media all and (min-width:40em) {
   /* Float layout */
@@ -289,6 +385,7 @@ nav .btn {
    margin:0;
    float:none;
   }
+  .nav-small {display:none;}
 
 }
 /* Code to adjust the layout to 3 cards per row */
