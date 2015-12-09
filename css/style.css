@@ -28,9 +28,9 @@ ul {margin:0;}
 .alsfalto {font-family: Asfalto;}
 .monthoers {font-family: Monthoers;}
 .lato {font-family: Lato;}
-.lowercase {
-    text-transform: lowercase;
-}
+.lowercase {text-transform: lowercase;}
+.pb2 {padding-bottom: 16px; padding-bottom: 1rem}
+
 .shadow-black {
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -43,7 +43,7 @@ ul {margin:0;}
   background-color: #fcfaf4;
 }
 .bg-green {
-  background-color: #1E824C;
+  background-color: #2f572f;
 }
 .bg-greyer {
   background-color: #424241;
@@ -90,14 +90,22 @@ ul {margin:0;}
   -o-border-image: url(/images/btn.png) 4 stretch;
   border-image: url(/images/btn.png) 4 stretch;
 }
+.nav-menu .btn:focus {
+  outline: none;
+  color:white;
+  background-color: #2f572f;
+  border-color:none;
+  border-color: none;
+  box-shadow: none;
+}
 
 /* SECTION HEADERS */
-h1:before, #get-started .h1:before {
+h1:before{
   padding: 0 10px 0 10px;
   content:'\21A0';
   vertical-align: 10%;
 }
-h1:after, #get-started .h1:after {
+h1:after{
   padding: 0 5px 0 10px;
   content:'\219E';
   vertical-align: 10%;
@@ -115,13 +123,23 @@ h1:after, #get-started .h1:after {
   background-color: #269545;
   font-family: lato;
 }
-.nav,.passport,.nav-small {height: 0;}
+.nav-small {
+  width: 100%;
+}
 .nav-menu {
   position: absolute;
   z-index: 9999999;
   top:0;
   height: 50px;
   width: 100%;
+}
+.nav-menu.navbar-fixed,.nav-small {
+  position: fixed;
+  top: 0;
+}
+.passport-button.passport-fixed {
+  position: fixed;
+  top:50px;
 }
 .nav-small {
   z-index: 9999999;
@@ -135,9 +153,11 @@ h1:after, #get-started .h1:after {
   width:100px;
 }
 
-/*.show-button {
-  display: inline-block;
-}*/
+/* VIDEO */
+.video-bg {
+  height: 600px;
+    background-image: url(../images/video/header-img.jpg);
+}
 
 /* NAVBAR */
 nav {
@@ -173,7 +193,7 @@ nav .btn {
   color:#D9E021;
 }
 .getting-around-image{
-  background-color: #1E824C;
+  background-color: #2f572f;
   width: 100%;
   height:100px;
   margin:0;
@@ -314,8 +334,7 @@ nav .btn {
   .footer {
     height: 300px;
     width: 100%;
-    background-repeat: repeat-x;
-    background-image: url("../images/trees.jpg");
+    background-color: #424241;
     position:relative;
     left:0;
     bottom:0;
@@ -330,8 +349,10 @@ nav .btn {
 /* Code to adjust the layout to 2 cards per row */
 @media all and (max-width: 39em) {
   .nav-small .h1{font-size: 1rem;}
+  .nav-small a{width: 40%;}
+  .nav-small div:first-of-type {width: 33%;}
   .get-started h1, .get-started .h1 {font-size: 1.5rem;}
-  .get-started .h3 {font-size: 1rem;}
+  .get-started .h3, .get-started span {font-size: 1rem;}
   .flex-card-list li {
     max-width:100%;
   }
@@ -339,6 +360,7 @@ nav .btn {
   .trail-stops h1, .getting-around h1 {font-size: 1.5rem;}
   .trail-stops .caps {letter-spacing: 0em;}
   .getting-around .py2 {padding-top: 1px;padding-bottom: 0}
+   {display: none;}
   .map {
    height:300px;
    width:100%;
@@ -365,7 +387,7 @@ nav .btn {
   }
   .map-panel .locations .h0, .map-panel .locations .h2 {font-size: 1.25rem;}
   .map-panel .locations .h3 {font-size: 1rem;}
-  .header,nav, .start-img, .passport-button, .events, .get-started {display: none;}
+  .header,nav, .start-img, .passport-button, .events, .video-hero {display: none;}
 
   .events ul {margin:0;padding:0;}
   .events ul li .h1 {font-size: 1rem;}
