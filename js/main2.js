@@ -2,7 +2,11 @@ $(function() {
   initializeScroll();
   initializeVideo();
   stickyHeader();
+  replaceSvg();
+  animateElement();
+  getInstafeed();
 });
+
 window.onload = function(){
   var icons = {
     beer: {
@@ -55,10 +59,10 @@ function getMarkerData(icons,markers,infoWindow){
 function createCards(locations){
   for (var i in locations){
     var location = locations[i];
-    $('.business-cards').append('<li class="bg-greyish border-box  flex flex-300 m1 center">'+
+    $('.business-cards').append('<li class="bg-greyish border-box  flex flex-300 m1 center animation-element bounce-up ">'+
       '<div class="flex-card flex flex-column styled-border" style="min-width: calc(100% - 20px)">'+
         '<div class="flex-card-logo center m1 styled-border-bottom">'+
-          '<img src="'+location.logo+'" width="100" height="100"/>'+
+          '<img src="'+location.logo+'" ALT="'+location.alt+'" width="100" height="100"/>'+
         '</div>'+
         '<div class="flex-card-text flex flex-column flex-grow">'+
           '<p class="h3">'+location.description+'</p>'+
@@ -66,8 +70,8 @@ function createCards(locations){
             '<div class="h2">'+location.address+'</div>'+
             '<div class="h3">'+location.time+'</div>'+
           '</div>'+
-          '<div class="">'+
-            '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1">Visit website</a>'+
+          '<div class="m1">'+
+            '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">Visit website</a>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -102,7 +106,7 @@ function createMarkers(locations,icons,markers,infoWindow) {
 function createMapList(locations,markers){
   for (var i in locations){
     var location = locations[i];
-    $('.businessList').append( '<li class="lato"><a class="business flex flex-center" data-location='+location.lat+','+location.lng+' data-id='+location.id+'><div class="flex-auto lh1 px1"><div class="h2">'+location.title+'</div><div class="h3">'+location.address+'</div></div></a></li>');
+    $('.businessList').append( '<li class="lato"><a class="business flex flex-center" alt="image marker icon" data-location='+location.lat+','+location.lng+' data-id='+location.id+'><div class="flex-auto lh1 px1"><div class="h2">'+location.title+'</div><div class="h3">'+location.address+'</div></div></a></li>');
   }
   function pan(latlon) {
     var coords = latlon.split(",");
@@ -125,15 +129,59 @@ function initializeScroll(){
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top-50
         }, 1000);
         return false;
       }
     }
   });
 }
+// Get Instagram photos
+function getInstafeed(){
+  var feed = new Instafeed({
+    get: 'tagged',
+    tagName: 'mslatrail',
+    userId: '2238867185',
+    limit: '8',
+    accessToken: '2238867185.467ede5.6ab6ee75da4c4655b6d8062734170ba6',
+    template: '<li class="instagram-image inline left"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></li>'
+  });
+  feed.run();
+}
 
+/*
+ * Replace all SVG images with inline SVG
+ */
+function replaceSvg(){
+    jQuery('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
 
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+
+        }, 'xml');
+
+    });
+  }
 
 // STICKY HEADER
 function stickyHeader(){
@@ -224,7 +272,33 @@ function initializeVideo(){
   }
 }
 
+function animateElement(){
+  var $animation_elements = $('.animation-element');
+  var $window = $(window);
+  function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+    $.each($animation_elements, function() {
+      console.log('here')
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = (element_top_position + element_height);
 
+      //check to see if this current container is within viewport
+      if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+        $element.addClass('in-view');
+      } else {
+        $element.removeClass('in-view');
+      }
+    });
+  }
+
+  $window.on('scroll resize', check_if_in_view);
+  $window.trigger('scroll');
+}
 
 
 
