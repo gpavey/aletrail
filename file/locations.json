@@ -18,7 +18,7 @@
     "lng": -114.0753071,
     "type": "beer",
     "address":"5417 Trumpeter Way",
-    "logo":"/images/logos/bigskybrewing.png",
+    "logo":"/images/logos/bigskybrewing-min.png",
     "alt":"logo for Big Sky Brewing",
     "description":"Missoula’s largest brewery and makers of Moose Drool Brown Ale",
     "time":"WED-FRI 11AM-6:30PM.; SAT 11AM-6PM",
@@ -30,7 +30,7 @@
     "lng": -114.0061477,
     "type": "beer",
     "address":"915 Toole Avenue",
-    "logo":"/images/logos/draughtworks.png",
+    "logo":"/images/logos/draughtworks-min.png",
     "alt":"logo for Draught Works",
     "description":"2014 GABF award winners for Very Small Brewing Company & Brewer",
     "time":"Noon-9pm every day",
@@ -43,10 +43,10 @@
     "lng": -113.9949491,
     "type": "beer",
     "address":"424 North Higgins",
-    "logo":"/images/logos/flathead-lake-brewing.png",
+    "logo":"/images/logos/flathead-min.png",
     "alt":"logo for Flathead Brewing",
     "description":"Bigfork, MT brewery with a downtown Missoula pubhouse",
-    "time":"Closed Mon; Tue-Thu & Sun 3pm - 12am; Fri-Sat 3pm -2am",
+    "time":"Closed Mon; Tue-Thu & Sun 3pm-12am; Fri-Sat 3pm-2am",
     "link":"http://Flatheadlakebrewing.com"
   }, {
     "id": 4,
@@ -55,10 +55,10 @@
     "lng": -114.032837,
     "type": "beer",
     "address":"2230 McDonald Avenue",
-    "logo":"/images/logos/greatBurnBrewing.png",
+    "logo":"/images/logos/greatBurnBrewing-min.png",
     "alt":"logo for Great Burn Brewing",
     "description":"Brewing West Coast-style ales on Missoula’s south side",
-    "time":"Closed Mon; Sun-Thu 3pm - 9pm; Fri-Sat noon - 9pm",
+    "time":"Closed Mon; Sun-Thu 3pm-9pm; Fri-Sat noon-9pm",
     "link":"http://greatburnbrewing.com"
   }, {
     "id": 5,
@@ -67,10 +67,10 @@
     "lng": -114.009638,
     "type": "beer",
     "address":"1151 West Broadway",
-    "logo":"/images/logos/imagination.png",
+    "logo":"/images/logos/imagination-min.png",
     "alt":"logo for Imagine Nation Brewing",
     "description":"Missoula’s only combination microbrewery and community center",
-    "time":"MON-FRI 2pm - 8pm; SAT-SUN 12 - 8pm",
+    "time":"MON-FRI 2pm-8pm; SAT-SUN 12-8pm",
     "link":"http://imaginenationbrewing.com"
   }, {
     "id": 6,
@@ -79,10 +79,10 @@
     "lng": -113.998851,
     "type": "beer",
     "address":"602 Myrtle Street",
-    "logo":"/images/logos/kettlehouse-logo.png",
+    "logo":"/images/logos/kettlehouse-logo-min.png",
     "alt":"logo for Kettle House",
     "description":"2015 GABF winner for Cold Smoke scotch ale",
-    "time":"FRI-SUN 12 - 9pm",
+    "time":"FRI-SUN 12-9pm",
     "link":"http://kettlehouse.com"
   }, {
     "id": 7,
@@ -91,10 +91,10 @@
     "lng": -113.9974585,
     "type": "beer",
     "address":"313 North 1st Street West",
-    "logo":"/images/logos/kettlehouse-logo.png",
+    "logo":"/images/logos/kettlehouse-logo-min.png",
     "alt":"logo for Kettle House",
     "description":"2015 GABF winner for Cold Smoke scotch ale",
-    "time":"FRI-SUN 12 - 10pm",
+    "time":"FRI-SUN 12-10pm",
     "link":"http://kettlehouse.com"
   }, {
     "id": 8,
@@ -103,10 +103,10 @@
     "lng": -114.0456542,
     "type": "beer",
     "address":"200 International Drive",
-    "logo":"/images/logos/mbc.png",
+    "logo":"/images/logos/mbc-min.png",
     "alt":"logo for Missoula Brewing Company",
     "description":"Brewery reviving historic Missoula recipes",
-    "time":"MON-THU 3pm - 8pm; FRI-SUN 12 - 8pm",
+    "time":"MON-THU 3pm-8pm; FRI-SUN 12-8pm",
     "link":"http://missoulabrewingcompany.com"
   }, {
     "id": 9,
@@ -115,10 +115,10 @@
     "lng": -113.99703,
     "type": "spirits",
     "address":"631 Woody Street",
-    "logo":"/images/logos/tmd.png",
+    "logo":"/images/logos/tmd-min.png",
     "alt":"logo for Montana Distillery",
     "description":"Missoula’s oldest vodka distillery",
-    "time":"MON-SAT 12 - 8pm; SUN 2 - 6pm",
+    "time":"MON-SAT 12-8pm; SUN 2-6pm",
     "link":"http://Flatheadvodka.com"
   }, {
     "id": 10,
@@ -127,10 +127,10 @@
     "lng": -113.9984398,
     "type": "spirits",
     "address":"129 West Front Street",
-    "logo":"/images/logos/montgomery.png",
+    "logo":"/images/logos/montgomery-min.png",
     "alt":"logo for Montgomery Distillery",
     "description":"One of “Food & Wine” Magazine’s Top 100 New Bars 2015",
-    "time":"MON-SAT 12 - 8 pm; SUN 12 -7pm",
+    "time":"MON-SAT 12-8 pm; SUN 12-7pm",
     "link":"http://montgomerydistillery.com"
   }, {
     "id": 11,
@@ -139,9 +139,9 @@
     "lng": -113.9952258,
     "type": "spirits",
     "address":"128 West Alder Street",
-    "logo":"/images/logos/rattlesnake.png",
+    "logo":"/images/logos/rattlesnake-min.png",
     "description":"Missoula’s newest distillery",
-    "time":"MON-SUN 12 - 8pm",
+    "time":"MON-SUN 12-8pm",
     "alt":"logo for Rattlesnake Creek Distillers",
     "link":"http://rattlesnakedistillers.com"
   }, {
@@ -154,7 +154,7 @@
     "logo":"/images/logos/tamarak.png",
     "alt":"logo for Tamarack Brewing Company",
     "description":"Lakeside, MT brewery with a Missoula taproom overlooking Caras Park",
-    "time":"MON-SUN 11am - midnight",
+    "time":"MON-SUN 11am-Midnight",
     "link":"http://tamarackbrewing.com"
   }
 ]

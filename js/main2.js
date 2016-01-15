@@ -1,6 +1,7 @@
 $(function() {
+  // initializeVideo();
+  // $('.header-background-video').bgVideo();
   initializeScroll();
-  initializeVideo();
   stickyHeader();
   replaceSvg();
   animateElement();
@@ -22,7 +23,6 @@ window.onload = function(){
   var markers = [];
   var locations = [];
   var infoWindow = new google.maps.InfoWindow();
-  initializeMap();
   getMarkerData(icons,markers,infoWindow);
 }
 
@@ -45,6 +45,7 @@ function getMarkerData(icons,markers,infoWindow){
     });
     requestAjax.done(function(data){
       locations = data;
+      initializeMap();
       createCards(locations);
       createMarkers(locations,icons,markers,infoWindow);
       createMapList(locations,markers);
@@ -59,16 +60,16 @@ function getMarkerData(icons,markers,infoWindow){
 function createCards(locations){
   for (var i in locations){
     var location = locations[i];
-    $('.business-cards').append('<li class="bg-greyish border-box  flex flex-300 m1 center animation-element bounce-up ">'+
-      '<div class="flex-card flex flex-column styled-border" style="min-width: calc(100% - 20px)">'+
+    $('.business-cards').append('<li class=" border-box  flex flex-300 m1 center card-border">'+
+      '<div class="flex-card flex flex-column" style="max-width: calc(100% - 20px); margin:0 24px;">'+
         '<div class="flex-card-logo center m1 styled-border-bottom">'+
-          '<img src="'+location.logo+'" ALT="'+location.alt+'" width="100" height="100"/>'+
+          '<img src="'+location.logo+'" ALT="'+location.alt+'" width="auto" height="100" class="mt2"/>'+
         '</div>'+
         '<div class="flex-card-text flex flex-column flex-grow">'+
           '<p class="h3">'+location.description+'</p>'+
           '<div class="address flex-grow">'+
             '<div class="h2">'+location.address+'</div>'+
-            '<div class="h3">'+location.time+'</div>'+
+            '<div class="h3 mb2">'+location.time+'</div>'+
           '</div>'+
           '<div class="m1">'+
             '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">Visit website</a>'+
@@ -280,7 +281,6 @@ function animateElement(){
     var window_top_position = $window.scrollTop();
     var window_bottom_position = (window_top_position + window_height);
     $.each($animation_elements, function() {
-      console.log('here')
       var $element = $(this);
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;

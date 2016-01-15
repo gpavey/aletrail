@@ -21,7 +21,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Asfalto,sans-serif;
   font-weight: normal;
 }
-ul {margin:0; padding:0;}
+h1 {color:#311c0f;}
+/*ul {margin:0; padding:0;}*/
 .overflow-auto {overflow: auto;}
 .h0 { font-size: 36px; font-size: 2.5rem }
 .lh1 {line-height: 1;}
@@ -39,17 +40,34 @@ ul {margin:0; padding:0;}
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
+.green {color:#aba30a;}
+.brown {color:#311c0f;}
 .bg-yellowish {
   background-color:#D9E021;
+}
+.bg-ltgrey {
+  background-color: #d5cdc5;
+}
+.bg-drkgrey {
+  background-color: #8c8e90;
 }
 .bg-greyish {
   background-color: #fcfaf4;
 }
 .bg-green {
-  background-color: #2f572f;
+  background-color: #aba30a;
 }
 .bg-greyer {
   background-color: #424241;
+}
+.bg-maroon {
+  background-color: rgba(94,0,29,.95)
+}
+.bg-brown {
+  background-color: #311c0f;
+}
+.bg-teal {
+  background-color: #006666;
 }
 .hr {
   border-bottom-style: solid;
@@ -66,21 +84,21 @@ ul {margin:0; padding:0;}
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
-  flex: 1 0 auto
+  flex: 1 0 auto;
   flex-basis: 0;
 }
 
 /* SIDE NAV */
 
 /* BORDERS */
-.styled-border{
+/*.styled-border{
   border-style: solid;
   border-width: 10px;
   -moz-border-image: url(/images/border.png) 15 stretch;
   -webkit-border-image: url(/images/border.png) 15 stretch;
   -o-border-image: url(/images/border.png) 15 stretch;
   border-image: url(/images/border.png) 15 stretch;
-}
+}*/
 .styled-border-bottom{
   border-style: solid;
   border-width: 0 0 10px;
@@ -103,11 +121,13 @@ h1:before{
   padding: 0 10px 0 10px;
   content:'\21A0';
   vertical-align: 10%;
+  color:#311c0f
 }
 h1:after{
   padding: 0 5px 0 10px;
   content:'\219E';
   vertical-align: 10%;
+  color:#311c0f;
 }
 
 /* BUTTONS */
@@ -119,7 +139,7 @@ h1:after{
   color:white;
 }
 .btn-primary {
-  background-color: #2f572f;
+  background-color: #311c0f;
   font-family: lato;
 }
 .btn-primary:active {
@@ -153,8 +173,7 @@ nav a:hover {
 .nav-menu .btn:focus {
   outline: none;
   color:white;
-  border-color:none;
-  border-color: none;
+  border:hidden;
   box-shadow: none;
   background: url(/images/stroke.png)no-repeat;
   background-size: 100%;
@@ -163,6 +182,8 @@ nav a:hover {
 .passport-button.passport-fixed {
   position: fixed;
   top:50px;
+  right: 50%;
+  transform: translateX(500%)
 }
 .nav-small {
   z-index: 9999999;
@@ -172,7 +193,8 @@ nav a:hover {
   position: absolute;
   z-index: 9999999;
   top:50px;
-  right: 50px;
+  right: 50%;
+  transform: translateX(500%);
   height: 100px;
   width:100px;
 }
@@ -205,19 +227,21 @@ nav .btn {
   box-sizing: border-box;
   margin: 16px;
   margin: 1rem;
-  color:#fff;
-  background-color: #424241;
-  border-radius: 3px;
+  color:#006666;
+    background: url(/images/frame2.png) no-repeat 0 0;
+  background-size: 100% 100%;
+ /* background-color: #311c0f;*/
+ /* border-radius: 3px;*/
   /*-webkit-box-flex: 1;*/
   -webkit-flex: 1 0 200px;
   -ms-flex: 1 0 200px;
   flex: 1 0 200px;
 }
 .getting-around-card a, getting-around-card a:hover {
-  color:#D9E021;
+  color:#d7822d;
 }
 .getting-around-image{
-  background-color: #2f572f;
+  /*background-color: #006666;*/
   width: 100%;
   height:100px;
   margin:0;
@@ -232,10 +256,10 @@ nav .btn {
   margin-top: 0;
   font-size: 24px; font-size: 1.5rem;
   font-family: Asfalto;
-  color:#D9E021;
+  color:#d7822d;
 }
 .getting-around-content{
-  padding:10px;
+  padding:20px;
   text-align: center;
   font-family: lato;
   line-height: 1;
@@ -268,7 +292,7 @@ nav .btn {
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-  background-color: #424241;
+  background-color: #311c0f;
 }
 .map-panel .list-header{
   width: 100%;
@@ -347,9 +371,19 @@ nav .btn {
   -ms-flex: 1 0 300px;
   flex: 1 0 300px;
 }
-
 .space-around {
   justify-content: space-around;
+}
+.card-border{
+  background: url(/images/frame3.png) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+/*  Event Cards */
+.event-card .sizing {
+  min-height: 350px;
+  min-width: calc(100%-40px);
+  margin: 0 24px;
 }
 
 /* ANIMATION */
@@ -382,15 +416,20 @@ nav .btn {
 }
 
 /* EVENTS */
-.events a, .events a:hover {
-  color:#D9E021;
+.events {color:#aba30a;}
+.events .h2 {
+  line-height: 1;
+  font-size: 2em;
+  color:#311c0f;
+}
+.events a {
+  color: #8c8e90;
+}
+.events a:hover {
+  color:#fbfbf5;
   cursor: pointer;
 }
-.border-yellow {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #D9E021;
-}
+
 
 /* FOOTER */
   .footer {
@@ -400,6 +439,9 @@ nav .btn {
     left:0;
     bottom:0;
   }
+.footer, .footer .h1, .footer .h2, .footer a{
+  color:#fbfbf5;
+}
 .footer ul.instagram {
   list-style: none;
   margin: 0;
@@ -412,7 +454,7 @@ nav .btn {
   width: 25%;
 }
 .footer a {
-  color: white;
+  color: #fbfbf5;
 }
 .footer a:hover {color:#d9e021;}
 .social-images{
@@ -440,11 +482,14 @@ nav .btn {
   .flex-card-list li {
     max-width:100%;
   }
-  .trail-stops .py3 {padding-top: 3rem;padding-bottom: 0rem;}
+/*  .trail-stops{
+    background-image: url(/images/map-5.png), url(/images/text-mask2.png); bottom: background-blend-mode: screen;
+  }
+*/  .trail-stops .py3 {padding-top: 3rem;padding-bottom: 0rem;}
   .trail-stops h1, .getting-around h1 {font-size: 1.5rem;}
   .trail-stops .caps {letter-spacing: 0em;}
   .getting-around .py2 {padding-top: 1px;padding-bottom: 0}
-   {display: none;}
+
   .map {
    height:300px;
    width:100%;
@@ -515,7 +560,7 @@ nav .btn {
 @media all and (min-width:60em) {
   /* common to flex and non-flex */
   .flex-card-list li {
-    width:33.33%;
+    max-width:33.33%;
   }
   /* Float specific: Clear after every third item */
   .no-flexbox .flex-card-list li:nth-child(3n+1) {

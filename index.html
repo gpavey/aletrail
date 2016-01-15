@@ -4,21 +4,22 @@
     <meta charset="UTF-8"/>
     <title>Missoula Spirit &amp; Ale Trail</title>
     <meta name="keywords" content="beer,spirits,alcohol,trail,aletrail,brewer,brewery,distillery,distilleries,destinationmissoula,Missoula,missouladowntown,missoulacultural,drinking,drinks,booze,maps"/>
-    <meta title="description" content="Follw the Missoula Spirit &amp; Ale Trail, get your passport filled and get an awesome prize">
+    <meta title="description" content="Follow the Missoula Spirit &amp; Ale Trail, get your passport filled and get an awesome prize">
     <meta title="author" content="geoffpavey.com"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/base.min.css">
-    <link rel="stylesheet" type="text/css" href="css/background-video.css">
-    <link rel="stylesheet" href="css/style.css">
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="css/background-video.css">
+    <link rel="stylesheet" href="css/base.min.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 <body class="border-box">
 
   <div class="body flex flex-column">
     <div class="video-hero">
       <div class="video-bg header-video">
-        <video class="" autoplay loop muted poster="../images/video/header-img.jpg">
+        <video class="header-background-video" autoplay  muted poster="../images/video/header-img.jpg">
           <source src="../images/video/header-video.mp4" type="video/mp4"/>
           <source src="../images/video/header-video.webm" type="video/webm"/>
           <source src="../images/video/header-video.ogv" type="video/ogg"/>
@@ -37,12 +38,11 @@
               <li class="inline"><a href="#trail-map" class="btn py2"> Trail Map</a></li>
               <li class="inline"><a href="#getting-around" class="btn py2">Get Around</a></li>
               <li class="inline"><a href="#events" class="btn py2">Local Events</a></li>
-<!--               <li class="inline"><a href="#events" class="btn py2">Get Passport</a></li> -->
             </ul>
           </div>
       </nav>
 
-      <div class="nav-small bg-green">
+      <div class="nav-small bg-brown">
         <div class="left center border-left p1"><img src="../images/logos/aletrail.svg" style="height: 52px; text-align: center;" alt="logo for aletrail"></div>
         <div class="flex center hr">
           <a href="#get-started" class="btn btn-primary border-left not-rounded">Rules</a>
@@ -53,22 +53,22 @@
           <a href="#getting-around" class="btn btn-primary border-left not-rounded">Transit</a>
         </div>
       </div>
-      <div class="container passport">
-        <a href="#" class="passport-button"><img src="../images/passport.png" alt="open passport" alt="small round image for link to paper passort"/></a>
+
+      <div class="container passport relative">
+        <a href="#" class="passport-button"><img src="../images/logos/passport.png" alt="open passport" alt="small round image for link to paper passort"/></a>
       </div>
 
       <section id="get-started" class="get-started shadow-black overflow-auto" style="background-image: url(/images/grey-background.png)">
         <div class="container py4">
-          <section id="how-to">
+          <div id="how-to">
             <div class="caps center">
               <h1>How to do the Trail</h1>
             </div>
             <div class="px2 py2">
               <p class="h3 lato">The Missoula Spirit &amp; Ale Trail provides you with a self-guided tasting tour through our beautiful and friendly mountain town.  By following the Trail Map, you’ll visit Missoula’s 9 unique craft breweries and 3 distilleries while tasting an incredible variety of locally made spirits and beer styles.  While on the trail, you’ll also get a tour of some of the most scenic spots in town and travel through historic neighborhoods, all while drinking like a local.</p>
             </div>
-          </section>
-
-          <section id="start" class="lato pb2">
+          </div>
+          <div id="start" class="lato pb2">
             <span class="caps h2">Get Started</span>
             <ul class="h3">
               <li>It's easy – either click the "Get Passport" badge to print your own Spirit &amp; Ale Trail passport, or pick up a printed map/passport at any participating Missoula brewery or distillery (known as Trail Stops).</li>
@@ -76,8 +76,8 @@
               <li>Taking your time, move along to the next Trail Stop…and the next, and the next… until your passport is full.</li>
               <li>Mail in your completed passport to  <a href="#swag">redeem your prize!</a> Collect all 9 brewery stamps and receive a custom stainless steel pint glass.  Collect all 3 distillery stamps and receive a stainless steel shot glass.  Fill your passport and receive <span class="italic bold">BOTH</span> prizes!</li>
             </ul>
-          </section>
-          <section id="rules" class="lato pb2">
+          </div>
+          <div id="rules" class="lato pb2">
             <span class="caps h2">Rules</span>
             <ul class="h3">
               <li>You must be 21 and over to complete a passport and claim a prize.</li>
@@ -85,8 +85,8 @@
               <li>Completing the Spirit & Ale Trail is free – however, each brewery and distillery has their own minimum purchase requirement.</li>
               <li>Submit one passport per person, per prize <a href="#swag">redemption.</a> Must submit original stamped passports only; no photocopies accepted.</li>
             </ul>
-          </section>
-          <section id="swag" class="lato h3">
+          </div>
+          <div id="swag" class="lato h3">
             <span class="caps h2">Redemption </span><span class="italic">(No... not your soul)</span>
             <div>
               <p>So you’ve completed your passport.  Congratulations!  You deserve a reward.... Or two.</p>
@@ -99,11 +99,11 @@
                 <li>If you want to order more for yourself or for friends who weren’t able to join you on the Missoula Spirit &amp; Ale Trail, we can do that too. <a href="">Buy Our Nifty Schwag</a></li>
               </ul>
             </div>
-          </section>
+          </div>
         </div>
       </section>
 
-      <section id="trail-stops" class="trail-stops monthoers shadow-black " style="background-image: url(/images/maps/map-6.png)">
+      <section id="trail-stops" class="trail-stops monthoers shadow-black " style="background-image: url(/images/maps/map-6.png), url(/images/5.jpg); bottom: background-blend-mode: screen;" >
 
         <div class="container pb4">
           <div class="clearfix">
@@ -118,7 +118,7 @@
 
       <section id="trail-map" class="trail-map bg-center shadow-black" style="background-image: url(/images/grey-background.png)">
         <div id="map" class="map shadow-black"></div>
-        <div class="map-panel list-header bg-maroon bg-lighten-1">
+        <div class="map-panel list-header">
           <div class="locations m2">
             <div class="list-header mt1">
               <div class="h0 asfalto white center">Trail<img src="/images/maps-icon.png" alt="topographic background image"> Map</div>
@@ -132,7 +132,7 @@
         </div>
       </section>
 
-      <section id="getting-around" class="getting-around bg-cover bg-center bg-greyish shadow-black monthoers py2" style="background-image: url(/images/maps/map-10.jpg)">
+      <section id="getting-around" class="getting-around bg-cover bg-center  shadow-black monthoers py2" style="background-image: url(/images/maps/map-10.jpg)">
         <div class="container pb4">
           <div class="caps center">
             <h1>Getting Around</h1>
@@ -199,93 +199,93 @@
         </div>
       </section>
 
-      <section id="events" class="events bg-greyer shadow-black pb2">
+      <section id="events" class="events  pb2" style="background-image: url(/images/grey-background.png)"/>
         <div class="container white ">
           <div class="clearfix">
             <div class="caps center">
               <h1>Events</h1>
             </div>
             <ul class="event-cards flex-card-list flex flex-wrap space-around monthoers lowercase list-reset">
-              <li class="animation-element bounce-up m1 flex flex-300 center">
-                  <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                    <div class="flex-card flex flex-column m1">
-                      <div class="flex-card-logo center m1">
-                        <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page">
+              <li class="animation-element bounce-up m1 flex flex-300 center ">
+                  <div class=" subject flex card-border brown" style="min-width: calc(100%)">
+                    <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                      <div class="flex-card-logo center mt2">
+                        <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page">
                       </div>
                       <div class="flex-card-text flex flex-column flex-grow">
                         <div class="h2 lh-1">Winter BrewFest</div>
-                        <div class="address flex-grow h3 mt1">Hosted by Missoula Downtown Association</div>
-                        <div class="h3 mb1"><a href="">More info</a></div>
+                        <div class="address flex-grow h3 mt1">Hosted by<br/> Missoula Downtown Association</div>
+                        <div class="h3 mb1"><a href="" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                       </div>
                     </div>
                   </div>
               </li>
               <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+                <div class="subject flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Missoula Craft Beer Week </div>
-                      <div class="address flex-grow h3 mt1">Hosted by Growler Fills and Montana Beer Finder</div>
-                      <div class="h3 mb1"> <a href="">More info</a></div>
+                      <div class="address flex-grow h3 mt1">Hosted by<br/> Growler Fills and Montana Beer Finder</div>
+                      <div class="h3 mb1"> <a href="" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+                <div class=" subject flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Garden City Brewfest</div>
                       <div class="address flex-grow h3 mt1"></div>
-                      <div class="h3 mb1"> <a href="www.missouladowntown.com" target="_blank">More info</a></div>
+                      <div class="h3 mb1"> <a href="www.missouladowntown.com" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
               </li>
              <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+                <div class=" subject flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Missoula Brews Cruise bicycle poker run</div>
-                      <div class="address flex-grow h3 mt1">Hosted by Montana Brewery Passport</div>
-                      <div class="h3 mb1"><a href="" target="_blank">More info</a></div>
+                      <div class="address flex-grow h3 mt1">Hosted by<br/> Montana Brewery Passport</div>
+                      <div class="h3 mb1"><a href="" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
               </li>
              <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+                <div class=" subject flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Germanfest</div>
                       <div class="address flex-grow h3 mt1"></div>
-                      <div class="h3 mb1"> <a href="http://www.missoulacultural.org" target="_blank">More info</a></div>
+                      <div class="h3 mb1"> <a href="http://www.missoulacultural.org" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
               </li>
              <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+                <div class=" subject flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Montana Brewers Halloween Tour</div>
-                      <div class="address flex-grow h3 mt1">Hosted by Montana Brewers Association</div>
-                      <div class="h3 mb1"><a href="" target="_blank">More info</a></div>
+                      <div class="address flex-grow h3 mt1">Hosted by<br/> Montana Brewers Association</div>
+                      <div class="h3 mb1"><a href="" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
@@ -295,31 +295,30 @@
             <div class="py2 caps center">
               <h1>Everything Else</h1>
             </div>
-            <ul class="event-cards flex-card-list flex flex-wrap space-around monthoers lowercase">
-             <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+            <ul class="flex-card-list flex flex-wrap space-around">
+
+             <li class="border-box flex flex-300 m1 center card-border ">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
                       <div class="h2 lh-1">Destination Missoula Website</div>
                       <div class="address flex-grow h3 mt1"></div>
-                      <div class="h3"> <a href="http://destinationmissoula.org/annual-events.php" target="_blank">More info</a></div>
+                      <div class="h3"> <a href="http://destinationmissoula.org/annual-events.php" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
-                </div>
               </li>
-             <li class="animation-element bounce-up m1 flex flex-300 center">
-                <div class=" subject border-yellow border-box bg-green flex" style="min-width: calc(100%)">
-                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 18px)">
-                    <div class="flex-card-logo center m1">
-                      <img src="../images/calendar.png" width="100" height="100" alt="graphic of calendar page"/>
+             <li class="border-box flex flex-300 m1 center card-border ">
+                <div class="flex card-border brown" style="min-width: calc(100%)">
+                  <div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">
+                    <div class="flex-card-logo center mt2">
+                      <img src="../images/calendar.png" width="60" height="60" alt="graphic of calendar page"/>
                     </div>
                     <div class="flex-card-text flex flex-column flex-grow">
-                      <div class="h2">Missoula cultural Council</div>
+                      <div class="h2 green">Missoula cultural Council</div>
                       <div class="address flex-grow h3 mt1"></div>
-                      <div class="h3"> <a href="http://www.missoulacultural.org/calendar" target="_blank">More info</a></div>
+                      <div class="h3"> <a href="http://www.missoulacultural.org/calendar" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>
                     </div>
                   </div>
                 </div>
@@ -329,13 +328,13 @@
         </div>
       </section>
     </main>
-    <footer class="footer shadow-black bg-green">
+    <footer class="footer shadow-black bg-brown">
       <div class="container m2 clearfix">
         <div class="social-images clearfix center left sm-col-12 lg-col-5">
           <ul id="instafeed" class="list-reset"></ul>
         </div>
         <div class="social clearfix center left sm-col-12 lg-col-4">
-          <div class="center white lg-col-12"><div class="h1">Tag your photos</div>
+          <div class="center lg-col-12"><div class="h1">Tag your photos</div>
           <div class="h2"><span class="lato ">&#35;</span><span class="lowercase">mslatrail</span></div>
         </div>
           <ul class="list-reset center p2">
@@ -356,7 +355,7 @@
             </li>
           </ul>
         </div>
-        <div class="contact clearfix center left sm-col-12 lg-col-3 white">
+        <div class="contact clearfix center left sm-col-12 lg-col-3">
           <div class="center">
             <div class="h1">Contact US</div>
             <div class="h2"><a href="mailto:info@missoulaspiritandaletrail.com">info@missoulaspiritandaletrail.com</a></div>
@@ -364,16 +363,14 @@
         </div>
       </div>
       <div class="container clearfix m2">
-        <div class="site-design clearfix center white sm-col-12 lg-col-12">&copy; <script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script>, blg.industries.inc. - Site: <a href="http://geoffpavey.com" target="_blank">Geoff Pavey Design</a></div>
+        <div class="site-design clearfix center sm-col-12 lg-col-12">&copy; <script>new Date().getFullYear()>2010&&document.write(+new Date().getFullYear());</script>, blg.industries.inc. - Site: <a href="http://geoffpavey.com" target="_blank">Geoff Pavey Design</a></div>
       </div>
     </footer>
   </div>
-  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="/js/instafeed.js"></script>
 
-  <script type="text/javascript" src="/js/background-video.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="/js/main2.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="/js/instafeed.js"></script>
 
 </body>
 </html>
