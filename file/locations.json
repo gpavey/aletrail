@@ -2,14 +2,14 @@
   {
     "id": 0,
     "title":"Bayern Brewing",
-    "lat": 46.872617,
-    "lng": -114.020145,
+    "lat": 46.8727291,
+    "lng": -114.0214211,
     "type": "beer",
     "address": "1507 Montana Street",
-    "logo":"/images/logos/BayernRibbonLogo.gif",
+    "logo":"bayern",
     "alt":"logo for Bayern Brewing",
     "description":"Brewing traditional German styles in Missoula for over 25 years",
-    "time":"Noon-8pm Every Day",
+    "time":"11AM-8PM Every Day",
     "link":"http://bayernbrewery.com"
   }, {
     "id": 1,
@@ -18,10 +18,10 @@
     "lng": -114.0753071,
     "type": "beer",
     "address":"5417 Trumpeter Way",
-    "logo":"/images/logos/bigskybrewing-min.png",
+    "logo":"bigskybrewing",
     "alt":"logo for Big Sky Brewing",
     "description":"Missoula’s largest brewery and makers of Moose Drool Brown Ale",
-    "time":"WED-FRI 11AM-6:30PM.; SAT 11AM-6PM",
+    "time":"WED-FRI 11AM-6:30PM; SAT 11AM-6PM",
     "link":"http://bigskybrew.com"
   }, {
     "id": 2,
@@ -30,10 +30,10 @@
     "lng": -114.0061477,
     "type": "beer",
     "address":"915 Toole Avenue",
-    "logo":"/images/logos/draughtworks-min.png",
+    "logo":"draughtworks",
     "alt":"logo for Draught Works",
     "description":"2014 GABF award winners for Very Small Brewing Company & Brewer",
-    "time":"Noon-9pm every day",
+    "time":"12PM-9PM every day",
     "link":"http://draughtworksbrewery.com"
   }, {
 
@@ -43,10 +43,10 @@
     "lng": -113.9949491,
     "type": "beer",
     "address":"424 North Higgins",
-    "logo":"/images/logos/flathead-min.png",
+    "logo":"flathead",
     "alt":"logo for Flathead Brewing",
     "description":"Bigfork, MT brewery with a downtown Missoula pubhouse",
-    "time":"Closed Mon; Tue-Thu & Sun 3pm-12am; Fri-Sat 3pm-2am",
+    "time":"Tue-Thu & Sun 3PM-12AM; Fri-Sat 3PM-2AM",
     "link":"http://Flatheadlakebrewing.com"
   }, {
     "id": 4,
@@ -55,10 +55,10 @@
     "lng": -114.032837,
     "type": "beer",
     "address":"2230 McDonald Avenue",
-    "logo":"/images/logos/greatBurnBrewing-min.png",
+    "logo":"greatburn",
     "alt":"logo for Great Burn Brewing",
     "description":"Brewing West Coast-style ales on Missoula’s south side",
-    "time":"Closed Mon; Sun-Thu 3pm-9pm; Fri-Sat noon-9pm",
+    "time":"Sun-Thu 2PM-9PM; Fri-Sat 12PM-9PM",
     "link":"http://greatburnbrewing.com"
   }, {
     "id": 5,
@@ -67,34 +67,34 @@
     "lng": -114.009638,
     "type": "beer",
     "address":"1151 West Broadway",
-    "logo":"/images/logos/imagination-min.png",
+    "logo":"imagination",
     "alt":"logo for Imagine Nation Brewing",
     "description":"Missoula’s only combination microbrewery and community center",
-    "time":"MON-FRI 2pm-8pm; SAT-SUN 12-8pm",
+    "time":"MON-FRI 2PM-8PM; SAT-SUN 12PM-8PM",
     "link":"http://imaginenationbrewing.com"
   }, {
     "id": 6,
     "title":"Kettle House",
-    "lat": 46.867009,
-    "lng": -113.998851,
+    "lat": 46.8659522,
+    "lng": -113.9989518,
     "type": "beer",
     "address":"602 Myrtle Street",
-    "logo":"/images/logos/kettlehouse-logo-min.png",
+    "logo":"kettlehouse",
     "alt":"logo for Kettle House",
     "description":"2015 GABF winner for Cold Smoke scotch ale",
-    "time":"FRI-SUN 12-9pm",
+    "time":"12PM-10PM Every day",
     "link":"http://kettlehouse.com"
   }, {
     "id": 7,
     "title":"Kettle House - Northside Taproom",
-    "lat": 46.8779048,
-    "lng": -113.9974585,
+    "lat": 46.8779152,
+    "lng": -113.997482,
     "type": "beer",
     "address":"313 North 1st Street West",
-    "logo":"/images/logos/kettlehouse-logo-min.png",
+    "logo":"kettlehouse",
     "alt":"logo for Kettle House",
     "description":"2015 GABF winner for Cold Smoke scotch ale",
-    "time":"FRI-SUN 12-10pm",
+    "time":"12PM-9PM Every day",
     "link":"http://kettlehouse.com"
   }, {
     "id": 8,
@@ -103,10 +103,10 @@
     "lng": -114.0456542,
     "type": "beer",
     "address":"200 International Drive",
-    "logo":"/images/logos/mbc-min.png",
+    "logo":"mbc",
     "alt":"logo for Missoula Brewing Company",
     "description":"Brewery reviving historic Missoula recipes",
-    "time":"MON-THU 3pm-8pm; FRI-SUN 12-8pm",
+    "time":"MON-THU 3PM-8PM; FRI-SUN 12PM-8PM",
     "link":"http://missoulabrewingcompany.com"
   }, {
     "id": 9,
@@ -115,11 +115,11 @@
     "lng": -113.99703,
     "type": "spirits",
     "address":"631 Woody Street",
-    "logo":"/images/logos/tmd-min.png",
+    "logo":"tmd",
     "alt":"logo for Montana Distillery",
-    "description":"Missoula’s oldest vodka distillery",
-    "time":"MON-SAT 12-8pm; SUN 2-6pm",
-    "link":"http://Flatheadvodka.com"
+    "description":"Montana’s 2nd oldest vodka distillery",
+    "time":"MON-SAT 12PM-8PM; SUN 2PM-6PM",
+    "link":"http://themtdistillery.com/"
   }, {
     "id": 10,
     "title":"Montgomery Distillery",
@@ -127,10 +127,10 @@
     "lng": -113.9984398,
     "type": "spirits",
     "address":"129 West Front Street",
-    "logo":"/images/logos/montgomery-min.png",
+    "logo":"montgomery",
     "alt":"logo for Montgomery Distillery",
     "description":"One of “Food & Wine” Magazine’s Top 100 New Bars 2015",
-    "time":"MON-SAT 12-8 pm; SUN 12-7pm",
+    "time":"MON-SAT 12PM-8PM pm; SUN 12PM-7PM",
     "link":"http://montgomerydistillery.com"
   }, {
     "id": 11,
@@ -139,9 +139,9 @@
     "lng": -113.9952258,
     "type": "spirits",
     "address":"128 West Alder Street",
-    "logo":"/images/logos/rattlesnake-min.png",
+    "logo":"rattlesnake",
     "description":"Missoula’s newest distillery",
-    "time":"MON-SUN 12-8pm",
+    "time":"MON-SUN 12PM-8PM Every day",
     "alt":"logo for Rattlesnake Creek Distillers",
     "link":"http://rattlesnakedistillers.com"
   }, {
@@ -151,10 +151,10 @@
     "lng": -113.9995003,
     "type": "beer",
     "address":"231 West Front Street",
-    "logo":"/images/logos/tamarak.png",
+    "logo":"tamarak",
     "alt":"logo for Tamarack Brewing Company",
     "description":"Lakeside, MT brewery with a Missoula taproom overlooking Caras Park",
-    "time":"MON-SUN 11am-Midnight",
+    "time":"11AM-11PM Every day",
     "link":"http://tamarackbrewing.com"
   }
 ]

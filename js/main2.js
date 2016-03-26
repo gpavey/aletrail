@@ -1,14 +1,108 @@
 $(function() {
-  // initializeVideo();
-  // $('.header-background-video').bgVideo();
-  initializeScroll();
-  stickyHeader();
+  initializeVideo();
   replaceSvg();
-  animateElement();
+  getData();
+  getEventData();
+  initializeScroll();
+  showRules();
   getInstafeed();
+  loadMap();
 });
 
-window.onload = function(){
+// Get Initial location data
+function getData(){
+  var requestAjax = $.ajax({
+    url: '../file/locations.json',
+    type: 'GET',
+    });
+    requestAjax.done(function(data){
+      locations = data;
+      createCards(locations);
+      $.when( createCards() ).done(function() {
+       stickyHeader();
+       // loadMap();
+      });
+    });
+    requestAjax.fail(function(jqXHR, textStatus, errorThrown){
+      alert(errorThrown);
+      alert(textStatus);
+  });
+}
+// Get Event Data
+function getEventData(){
+  var requestAjax = $.ajax({
+    url: '../file/events.json',
+    type: 'GET',
+    });
+    requestAjax.done(function(data){
+      events = data;
+      createEventCards(events);
+        $.when( createEventCards() ).done(function() {
+          animateElement();
+        });
+    });
+    requestAjax.fail(function(jqXHR, textStatus, errorThrown){
+      alert(errorThrown);
+      alert(textStatus);
+  });
+}
+//Create Cards
+function createCards(locations){
+  for (var i in locations){
+    var location = locations[i];
+    $('.business-cards').append('<li class=" border-box  flex flex-300 m1 center card-border">'+
+      '<div class="flex-card flex flex-column" style="max-width: calc(90% - 20px); margin:0 auto;">'+
+        '<div class="center m1 styled-border-bottom">'+
+
+          '<div class="mt2 '+ location.logo+'"></div>'+
+        '</div>'+
+        '<div class="flex-card-text flex flex-column flex-grow">'+
+          '<p class="h3">'+location.description+'</p>'+
+          '<div class="address flex-grow">'+
+            '<div class="h2">'+location.address+'</div>'+
+            '<div class="h3 mb2">'+location.time+'</div>'+
+          '</div>'+
+          '<div class="m1">'+
+            '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">Visit website</a>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+    '</li>');
+  };
+}
+//Create EVENT Cards
+function createEventCards(events){
+  for (var i in events){
+    var event = events[i];
+    $('.event-cards').append('<li class="animation-element bounce-up m1 flex flex-300 center ">'+
+      '<div class=" subject flex card-border brown" style="min-width: calc(100%)">'+
+          '<div class="flex-card flex flex-column m1" style="min-width: calc(100% - 47px); margin:0 24px; min-height: 275px;">'+
+            '<div class="flex-card-logo center h3 mt2">'+
+              '<div class="h2 pt24 monthoers"> '+event.month+'<br/></div>'+
+            '</div>'+
+            '<div class="flex-card-text flex flex-column flex-grow">'+
+              '<div class="h2 lh-1">'+event.title+'</div>'+
+              '<div class="address flex-grow h3 mt1">Hosted by<br/> '+event.host+'</div>'+
+              '<div class="h3 mb1"><a href="'+event.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">More info</a></div>'+
+            '</div>'+
+          '</div>'+
+        '</div>'+
+    '</li>');
+  };
+}
+
+function showRules(){
+  $('#tab-1').show();
+  $(".tabs li a").on("click", function() {
+    var id = $('.tabs li a').index($(this)) +1;
+    $('.tabs li a').removeClass('active');
+    $(this).addClass('active');
+    $('#tabs-content div').hide();
+    $('#tab-'+id).fadeIn(200);
+  });
+}
+
+function loadMap(){
   var icons = {
     beer: {
       name: 'Beer',
@@ -37,7 +131,7 @@ function initializeMap(){
   });
 }
 
-// load JSON data then Create Cards, Create Markers and Business List
+// load JSON data then Create Markers and Business List
 function getMarkerData(icons,markers,infoWindow){
   var requestAjax = $.ajax({
     url: '../file/locations.json',
@@ -46,7 +140,6 @@ function getMarkerData(icons,markers,infoWindow){
     requestAjax.done(function(data){
       locations = data;
       initializeMap();
-      createCards(locations);
       createMarkers(locations,icons,markers,infoWindow);
       createMapList(locations,markers);
     });
@@ -54,30 +147,6 @@ function getMarkerData(icons,markers,infoWindow){
       alert(errorThrown);
       alert(textStatus);
   });
-}
-
-//Create Cards
-function createCards(locations){
-  for (var i in locations){
-    var location = locations[i];
-    $('.business-cards').append('<li class=" border-box  flex flex-300 m1 center card-border">'+
-      '<div class="flex-card flex flex-column" style="max-width: calc(100% - 20px); margin:0 24px;">'+
-        '<div class="flex-card-logo center m1 styled-border-bottom">'+
-          '<img src="'+location.logo+'" ALT="'+location.alt+'" width="auto" height="100" class="mt2"/>'+
-        '</div>'+
-        '<div class="flex-card-text flex flex-column flex-grow">'+
-          '<p class="h3">'+location.description+'</p>'+
-          '<div class="address flex-grow">'+
-            '<div class="h2">'+location.address+'</div>'+
-            '<div class="h3 mb2">'+location.time+'</div>'+
-          '</div>'+
-          '<div class="m1">'+
-            '<a href="'+location.link+'" target="_blank" class="btn h4 btn-outline styled-btn mb1 pb0">Visit website</a>'+
-          '</div>'+
-        '</div>'+
-      '</div>'+
-    '</li>');
-  };
 }
 
 //Create and place markers on map
@@ -103,6 +172,7 @@ function createMarkers(locations,icons,markers,infoWindow) {
     markers.push(marker);
   }
 }
+
 // Create business list for map sidebar
 function createMapList(locations,markers){
   for (var i in locations){
@@ -143,7 +213,7 @@ function getInstafeed(){
     get: 'tagged',
     tagName: 'mslatrail',
     userId: '2238867185',
-    limit: '8',
+    limit: '10',
     accessToken: '2238867185.467ede5.6ab6ee75da4c4655b6d8062734170ba6',
     template: '<li class="instagram-image inline left"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></li>'
   });

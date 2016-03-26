@@ -31,13 +31,7 @@
      -moz-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
 }
-  /**
-   * For full-screen video backgrounds, add the
-   * .video-bg--fullscreen class to .video-bg div
-   */
-  .video-bg--fullscreen {
-    position: fixed;
-  }
+
 .video-overlay {
   position: absolute;
   top: 0;
@@ -48,7 +42,7 @@
 }
 
 .video-bg.header-video {
-  background-image: url(../images/video/header-img.jpg);
+  background-image: url(../images/video/header-video.jpg);
 }
 /**
  * Fade in videos

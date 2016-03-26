@@ -1,0 +1,77 @@
+.bayern, .bigskybrewing, .draughtworks, .flathead, .greatBurnBrewing, .imagination, .kettlehouse-logo, .mbc, .montgomery, .tamarak, .tmd, .rattlesnake{
+  background: url(/images/sprites.png) no-repeat;
+  background-size: 100%;
+}
+
+.bayern{
+  background-position: 0 -2px ;
+  width: 191px;
+  height: 265px;
+}
+
+.bigskybrewing{
+  background-position: -622px -308px ;
+  width: 200px;
+  height: 154px;
+}
+
+.draughtworks{
+  background-position: -441px 0;
+  width: 300px;
+  height: 300px;
+}
+
+.flathead{
+  background-position: 0 -271px ;
+  width: 279px;
+  height: 289px;
+}
+
+.greatBurnBrewing{
+  background-position: -198px -1px ;
+  width: 250px;
+  height: 250px;
+}
+
+.imagination{
+  background-position: -280px -253px ;
+  width: 180px;
+  height: 241px;
+}
+
+.kettlehouse-logo{
+  background-position: -473px -309px ;
+  width: 142px;
+  height: 176px;
+}
+
+.mbc{
+  background-position: 0 -563px ;
+  width: 300px;
+  height: 219px;
+}
+
+.montgomery{
+  background-position: -305px -504px ;
+  width: 198px;
+  height: 243px;
+}
+
+.tamarak{
+  background-position: -505px -495px ;
+  width: 352px;
+  height: 271px;
+}
+
+.tmd{
+  background-position: 0 -788px ;
+  width: 300px;
+  height: 238px;
+}
+
+.rattlesnake{
+  background-position: -317px -768px ;
+  width: 247px;
+  height: 100px;
+}
+

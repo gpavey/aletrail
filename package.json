@@ -43,16 +43,22 @@
     "flex-object": "latest"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.1",
     "cssnext": "^1.1.0",
     "http-server": "^0.8.0",
     "watch": "^0.14.0"
   },
   "scripts": {
     "css": "cssnext src/base.css css/base.css",
+    "css2": "cssnext css/style.css css/style.css",
+    "build:css": "postcss --use autoprefixer -b 'last 2 versions' <css/style.css > src/main.css",
     "minify:css": "cssnext -c src/base.css css/base.min.css",
+    "minify:css2": "cssnext -c src/main.css css/style.min.css",
     "serve": "http-server",
-    "start": "npm run watch:css & npm run serve",
-    "watch:css": "watch 'npm run css && npm run minify:css' ./src"
+    "start": "npm run watch:css & npm run watch:css2 & npm run serve",
+    "watch:css": "watch 'npm run css && npm run minify:css' ./src",
+    "watch:css2": "watch 'npm run css2 && npm run minify:css2' ./src",
+    "build" : "npm run build:css && npm run minify:css2"
   },
   "repository": {
     "type": "git",

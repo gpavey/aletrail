@@ -1,0 +1,628 @@
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden
+}
+
+body {
+  overflow-x: hidden
+}
+
+
+.fade-in-page {
+  -webkit-animation: fade-in ease-in 2s both;
+  animation: fade-in ease-in 2s both
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.sky {
+  position: relative;
+  height: 0;
+  padding-bottom: 55%;
+  background-image: -webkit-linear-gradient(#4195af 0%, #28697c 100%);
+  background-image: linear-gradient(#4195af 0%, #28697c 100%)
+}
+
+@media (max-width: 54em) {
+  .sky {
+    width: 140%;
+    left: -20%;
+    padding-bottom: 88.2%
+  }
+}
+
+
+.sky--welcome {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  width: 54%;
+  height: 55%;
+  margin-left: -27%;
+  font-size: 0;
+  background-image: url("../images/animation/aletrail.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain
+}
+
+@media (min-width: 54em) {
+  .sky--welcome {
+    top: 0%;
+    width: 48%;
+    height: 48%;
+    margin-left: -24%
+  }
+}
+
+.sky--mountainline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85%;
+  background-image: url("../images/animation/mountains.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain
+}
+
+
+.sky--clouds-bg {
+  position: absolute;
+  top: 11%;
+  left: 10%;
+  width: 200%;
+  height: 27%;
+  background-image: url("../images/animation/clouds.png");
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+  -webkit-animation: sky--clouds-bg 90s linear infinite;
+  animation: sky--clouds-bg 90s linear infinite;
+  will-change: transform
+}
+
+@-webkit-keyframes sky--clouds-bg {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  100% {
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%)
+  }
+}
+
+@keyframes sky--clouds-bg {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  100% {
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%)
+  }
+}
+
+.sky--clouds-fg {
+  position: absolute;
+  top: 0%;
+  left: -5%;
+  width: 200%;
+  height: 30%;
+  background-image: url("../images/animation/clouds.png");
+  background-repeat: repeat-x;
+  background-position: left;
+  background-size: auto 100%;
+  opacity: .9;
+  -webkit-animation: sky--clouds-fg 50s linear infinite;
+  animation: sky--clouds-fg 50s linear infinite;
+  will-change: transform
+}
+
+@-webkit-keyframes sky--clouds-fg {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  100% {
+    -webkit-transform: translateX(2.6%);
+    transform: translateX(2.6%)
+  }
+}
+
+@keyframes sky--clouds-fg {
+  0% {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+  }
+  100% {
+    -webkit-transform: translateX(2.6%);
+    transform: translateX(2.6%)
+  }
+}
+
+.trees {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85%;
+  background-image: url("../images/animation/trees.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain
+}
+
+@media (max-width: 54em) {
+  .ground {
+    width: 140%;
+    left: -20%;
+    padding-bottom: 64.4%
+  }
+}
+
+
+.camp-smoke-1 {
+  position: absolute;
+  top: 66%;
+  left: 50.5%;
+  width: 3%;
+  height: 16%;
+  background-image: url("../images/animation/city_smoke_1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: camp-smoke-1 8s linear infinite;
+  animation: camp-smoke-1 8s linear infinite;
+  will-change: opacity transform
+}
+
+@-webkit-keyframes camp-smoke-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%)
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-8%);
+    transform: translateY(-8%)
+  }
+  70% {
+    opacity: 0;
+    -webkit-transform: translateY(-14%);
+    transform: translateY(-14%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%)
+  }
+}
+
+@keyframes camp-smoke-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+    transform: translateY(5%)
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(-8%);
+    transform: translateY(-8%)
+  }
+  70% {
+    opacity: 0;
+    -webkit-transform: translateY(-14%);
+    transform: translateY(-14%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10%);
+    transform: translateY(10%)
+  }
+}
+
+.camp-smoke-2 {
+  position: absolute;
+  top: 72%;
+  left: 52%;
+  width: 1%;
+  height: 2%;
+  background-image: url("../images/animation/city_smoke_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: camp-smoke-2 6s linear infinite;
+  animation: camp-smoke-2 6s linear infinite;
+  will-change: opacity transform
+}
+
+@-webkit-keyframes camp-smoke-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateY(-500%);
+    transform: translateY(-500%)
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: translateY(-550%);
+    transform: translateY(-550%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes camp-smoke-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: translateY(-500%);
+    transform: translateY(-500%)
+  }
+  80% {
+    opacity: 0;
+    -webkit-transform: translateY(-550%);
+    transform: translateY(-550%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.camp-smoke-3 {
+  position: absolute;
+  top: 73%;
+  left: 52%;
+  width: 2%;
+  height: 5%;
+  background-image: url("../images/animation/city_smoke_3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: camp-smoke-3 9s linear infinite;
+  animation: camp-smoke-3 9s linear infinite;
+  will-change: opacity transform
+}
+
+@-webkit-keyframes camp-smoke-3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%)
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-180%);
+    transform: translateY(-180%)
+  }
+  90% {
+    opacity: 0;
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes camp-smoke-3 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+  }
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%)
+  }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(-180%);
+    transform: translateY(-180%)
+  }
+  90% {
+    opacity: 0;
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%)
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.camp-smoke-4 {
+  position: absolute;
+  top: 73%;
+  left: 50.5%;
+  width: 1.2%;
+  height: 2.4%;
+  background-image: url("../images/animation/city_smoke_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: camp-smoke-2 5s linear infinite;
+  animation: camp-smoke-2 5s linear infinite;
+  will-change: opacity transform
+}
+
+
+.fish {
+  position: absolute;
+  bottom: 20.1%;
+  left: 65.2%;
+  width: 4%;
+  height: 4%;
+  max-height: 4%;
+  background-image: url("../images/animation/fish.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  -webkit-animation: fish 8s linear infinite;
+  animation: fish 8s linear infinite;
+  will-change: transform
+}
+
+@-webkit-keyframes fish {
+  0% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  30% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  40% {
+    max-height: 3%;
+    -webkit-transform: scaleX(1);
+    transform: rotate(-50deg) scaleX(1)
+  }
+  60% {
+    max-height: 3%;
+    -webkit-transform: scaleX(1);
+    transform: rotate(50deg)  scaleX(1)
+  }
+  63% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  100% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+}
+
+@keyframes fish {
+  0% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  30% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  40% {
+    max-height: 3%;
+    -webkit-transform: scaleX(1);
+    transform: rotate(-50deg) scaleX(1)
+  }
+  60% {
+    max-height: 3%;
+    -webkit-transform: scaleX(1);
+    transform: rotate(50deg)  scaleX(1)
+  }
+  63% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+  100% {
+    max-height: 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1)
+  }
+}
+
+.bike {
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  width: 5%;
+  height: 3%;
+  background-image: url("../images/animation/bike.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: bike 30s ease infinite;
+  animation: bike 30s ease infinite;
+  will-change: transform
+}
+
+@-webkit-keyframes bike {
+  0% {
+    -webkit-transform: translateX(-40%) scaleX(1);
+    transform: translateX(-40%) scaleX(1)
+  }
+  49% {
+    -webkit-transform: translateX(280%) scaleX(1);
+    transform: translateX(280%) scaleX(1)
+  }
+  50% {
+    -webkit-transform: translateX(280%) scaleX(-1);
+    transform: translateX(280%) scaleX(-1)
+  }
+  51% {
+    -webkit-transform: translateX(280%) scaleX(-1);
+    transform: translateX(280%) scaleX(-1)
+  }
+  99% {
+    -webkit-transform: translateX(-40%) scaleX(-1);
+    transform: translateX(-40%) scaleX(-1)
+  }
+  100% {
+    -webkit-transform: translateX(-40%) scaleX(1);
+    transform: translateX(-40%) scaleX(1)
+  }
+}
+
+@keyframes bike {
+  0% {
+    -webkit-transform: translateX(-40%) scaleX(1);
+    transform: translateX(-40%) scaleX(1)
+  }
+  49% {
+    -webkit-transform: translateX(280%) scaleX(1);
+    transform: translateX(280%) scaleX(1)
+  }
+  50% {
+    -webkit-transform: translateX(280%) scaleX(-1);
+    transform: translateX(280%) scaleX(-1)
+  }
+  51% {
+    -webkit-transform: translateX(280%) scaleX(-1);
+    transform: translateX(280%) scaleX(-1)
+  }
+  99% {
+    -webkit-transform: translateX(-40%) scaleX(-1);
+    transform: translateX(-40%) scaleX(-1)
+  }
+  100% {
+    -webkit-transform: translateX(-40%) scaleX(1);
+    transform: translateX(-40%) scaleX(1)
+  }
+}
+.tubes {
+  position: absolute;
+  top: 62.1%;
+  left: 51%;
+  width: 5%;
+  height: 6%;
+  background-image: url("../images/animation/tubers.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-animation: tubes 10s ease infinite;
+  animation: tubes 30s ease-in-out infinite;
+  will-change: transform
+}
+
+@-webkit-keyframes tubes {
+  0% {
+    -webkit-transform: translateX(-40%) scale(.2);
+    transform: translateX(-40%) scale(.2);
+  }
+  25% {
+    -webkit-transform: transform: translate(50%,60%) scale(.3);
+    transform: translate(50%,60%) scale(.3);
+  }
+  50% {
+    -webkit-transform: transform: translate(-40%,150%) scale(.5);
+    transform: translate(-40%,150%) scale(.5);
+  }
+  75% {
+    -webkit-transform: transform: translate(350%,250%) scale(.75);
+    transform: translate(350%,250%) scale(.75);
+  }
+  100% {
+    -webkit-transform: ransform: translate(900%,350%) scale(1);
+    transform: translate(900%,350%) scale(1);
+  }
+}
+
+@keyframes tubes {
+  0% {
+    -webkit-transform: translateX(-40%) scale(.2);
+    transform: translateX(-40%) scale(.2);
+  }
+  25% {
+    -webkit-transform: transform: translate(50%,60%) scale(.3);
+    transform: translate(50%,60%) scale(.3);
+  }
+  50% {
+    -webkit-transform: transform: translate(-40%,150%) scale(.5);
+    transform: translate(-40%,150%) scale(.5);
+  }
+  75% {
+    -webkit-transform: transform: translate(350%,250%) scale(.75);
+    transform: translate(350%,250%) scale(.75);
+  }
+  100% {
+    -webkit-transform: ransform: translate(900%,350%) scale(1);
+    transform: translate(900%,350%) scale(1);
+  }
+}
+
+
+
